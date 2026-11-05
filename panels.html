@@ -1,0 +1,22 @@
+<section class="panel" data-panel="radar" id="panel-radar">
+ <div class="page-title"><div><p class="eyebrow">发现变化 · 核验依据 · 形成待办</p><h1>政策与舆情雷达</h1></div><button id="reload-news" class="secondary-button">重新读取快照</button></div>
+ <div class="notice info">当前是定时采集快照。官方新闻也不等于已生效法规；每条线索需回到原文核验。首期来源以政府公告为主，尚未接入社交平台情感监测。</div>
+ <p id="news-status" role="status">正在读取交付快照…</p>
+ <div class="search-bar"><label>市场<select id="news-market"><option value="">全部市场</option></select></label><label>主题<select id="news-category"><option value="">全部主题</option></select></label><label>关键词<input id="news-query" placeholder="产品、机构或事件"></label><label>关联项目<select id="news-scope"><option value="all">全部线索</option><option value="project">当前项目市场</option></select></label></div>
+ <p id="news-count"></p><div id="news-items" class="card-list"></div>
+</section>
+<section class="panel" data-panel="companies" id="panel-companies">
+ <div class="page-title"><div><p class="eyebrow">企业事实 → 产品参数 → 目标市场</p><h1>企业研究档案</h1></div><a class="secondary-button" href="./research.html" target="_blank" rel="noopener">打开完整前置研究 ↗</a></div>
+ <div class="notice info">整合现有研究中的两家企业作为验证案例。公开型号用于研究，不代表出口款已完成认证，也不表示企业已经向该市场出口。导入时未知参数保持为空。</div>
+ <div class="company-grid">
+ <article class="form-card"><p class="eyebrow">01 / 厨房小家电</p><h2>小熊电器</h2><p>研究路线：电饭煲 → 马来西亚半岛</p><h3>DFB-B12F1 / DFB-P20H1</h3><p>官网资料分别标示 300 W、1.2 L 和 600 W、3 L。额定容量与最大煮饭容量不可混用；出口款参数需单独确认。</p><p><a href="https://www.bears.com.cn/products/kitcheninfo.html?id=175" target="_blank" rel="noopener">300 W 产品资料 ↗</a> · <a href="https://www.bears.com.cn/products/kitcheninfo.html?id=199" target="_blank" rel="noopener">600 W 产品资料 ↗</a></p><p class="notice">优先追问：最大煮饭容量、加热方式、当地进口商与安全审批材料。</p><button class="primary-button" data-company="bear">带入研究情景</button></article>
+ <article class="form-card"><p class="eyebrow">02 / 清洁家电</p><h2>石头科技</h2><p>研究路线：扫拖机器人 → 德国</p><h3>S8 MaxV Ultra</h3><p>核对整套设备及随箱基站的地区版。10,000 Pa 是吸力，不能作为额定功率。120 V 基站与 220–240 V 基站需要分别核验。</p><p><a href="https://de.roborock.com/products/roborock-s8-maxv-ultra-saugroboter-mit-8-in-1-rockdock-ultra" target="_blank" rel="noopener">德国官方产品资料 ↗</a></p><p class="notice">优先追问：随箱基站型号、额定输入、电池与无线配置、欧盟责任主体。</p><button class="primary-button" data-company="roborock">带入研究情景</button></article>
+ </div>
+</section>
+<section class="panel" data-panel="advice" id="panel-advice">
+ <div class="page-title"><div><p class="eyebrow">千问办公 · 人工辅助分析</p><h1>从证据到行动建议</h1></div><span class="badge outline">手动闭环 · 未接 API</span></div>
+ <div class="notice info">先运行合规初筛和税费测算，再生成分析任务。将任务复制到千问办公，粘贴返回的建议并保存，即可合并到综合报告。规则提示与千问回复分别标注。</div>
+ <div class="company-grid"><article class="form-card"><h2>1. 准备证据任务</h2><p>自动汇总当前项目、规则结果、税费缺口与所选新闻。最多可选 8 条新闻；未选择时采用当前市场最近 5 条。</p><button id="make-prompt" class="primary-button">生成千问分析任务</button><label>可复制的分析任务<textarea id="qwen-prompt" rows="15" readonly placeholder="生成后显示项目证据与分析要求"></textarea></label><button id="copy-prompt" class="secondary-button">复制任务</button></article>
+ <article class="form-card"><h2>2. 保存千问建议</h2><p>请检查引用、日期与假设。保存的文本会标注为“用户从千问导入，尚待人工复核”。</p><label>粘贴千问回复<textarea id="qwen-answer" rows="15" maxlength="50000" placeholder="粘贴千问返回的完整分析"></textarea></label><button id="save-answer" class="primary-button">保存并合并到报告</button><p id="answer-status" role="status"></p></article></div>
+ <article class="form-card" style="margin-top:24px"><h2>当前项目的规则准备提示</h2><div id="advice-summary">完成合规初筛后，生成分析任务查看。</div><button id="clear-answer" class="text-button">清除本机保存的千问建议</button></article>
+</section>
