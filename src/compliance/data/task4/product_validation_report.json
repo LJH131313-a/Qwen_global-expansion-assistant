@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-11-04T10:41:56.821Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "category_ids_unique",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "name": "group_ids_unique",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "name": "subcategory_ids_unique",
+      "pass": true,
+      "detail": 57
+    },
+    {
+      "name": "field_ids_unique",
+      "pass": true,
+      "detail": 80
+    },
+    {
+      "name": "mapping_ids_unique",
+      "pass": true,
+      "detail": 773
+    },
+    {
+      "name": "source_ids_unique",
+      "pass": true,
+      "detail": 39
+    },
+    {
+      "name": "subcategory_group_references",
+      "pass": true,
+      "detail": "all group_id values resolve"
+    },
+    {
+      "name": "mapping_subcategory_references",
+      "pass": true,
+      "detail": "all subcategory_id values resolve"
+    },
+    {
+      "name": "mapping_field_references",
+      "pass": true,
+      "detail": "all field_id values resolve"
+    },
+    {
+      "name": "source_references",
+      "pass": true,
+      "detail": "all source_ids resolve"
+    },
+    {
+      "name": "judgment_references",
+      "pass": true,
+      "detail": "all judgment_ids resolve"
+    },
+    {
+      "name": "unknown_option_policy",
+      "pass": true,
+      "detail": "all selection fields include unknown"
+    },
+    {
+      "name": "pending_fields_not_published",
+      "pass": true,
+      "detail": "pending fields are not publishable"
+    },
+    {
+      "name": "M1_not_published",
+      "pass": true,
+      "detail": "M1 questions remain draft"
+    },
+    {
+      "name": "rejected_source_not_used",
+      "pass": true,
+      "detail": "wrong-content Therabody PDF excluded"
+    },
+    {
+      "name": "existing_rule_keys_verified",
+      "pass": true,
+      "detail": {
+        "declared": [
+          "household",
+          "voltage_ac",
+          "portable",
+          "handheld",
+          "heats_liquid",
+          "cooks_or_warms_food",
+          "capacity_l",
+          "microwave_heating",
+          "mechanical_food_prep",
+          "suction_cleaning",
+          "mains_dock",
+          "dock_dust_removal",
+          "moves_air",
+          "comfort_heating",
+          "hair_care",
+          "fabric_pressing",
+          "heated_soleplate"
+        ],
+        "actual": [
+          "capacity_l",
+          "comfort_heating",
+          "cooks_or_warms_food",
+          "dock_dust_removal",
+          "fabric_pressing",
+          "hair_care",
+          "handheld",
+          "heated_soleplate",
+          "heats_liquid",
+          "household",
+          "mains_dock",
+          "market",
+          "mechanical_food_prep",
+          "microwave_heating",
+          "moves_air",
+          "portable",
+          "product_type",
+          "sales_state",
+          "suction_cleaning",
+          "voltage_ac"
+        ]
+      }
+    },
+    {
+      "name": "diverse_question_signatures",
+      "pass": true,
+      "detail": {
+        "sampleIds": [
+          "K-BEV-001",
+          "C-VAC-005",
+          "A-QUAL-001",
+          "P-HAIR-002",
+          "G-IRON-002",
+          "G-FAB-001",
+          "K-BEV-005"
+        ],
+        "uniqueSignatures": 7
+      }
+    },
+    {
+      "name": "cross_category_irrelevance",
+      "pass": true,
+      "detail": "air purifier excludes cooking fields; fabric shaver excludes liquid/pressure/microwave/vacuum fields"
+    }
+  ],
+  "counts": {
+    "categories": 5,
+    "groups": 12,
+    "subcategories": 57,
+    "fields": 80,
+    "mappings": 773,
+    "sources": 39,
+    "gaps": 12
+  }
+}
