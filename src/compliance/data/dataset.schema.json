@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Compliance Screening Dataset",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "data_as_of",
+    "tables"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "data_as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "tables": {
+      "type": "object",
+      "required": [
+        "法规条件与义务规则",
+        "产品参数与动态追问",
+        "HS候选与归类依据",
+        "税率税种与公式",
+        "典型业务测试案例",
+        "来源状态全索引"
+      ],
+      "properties": {
+        "法规条件与义务规则": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "rule_id",
+              "market",
+              "condition",
+              "obligation",
+              "source_ids",
+              "rule_status"
+            ],
+            "properties": {
+              "rule_id": {
+                "type": "string"
+              },
+              "condition": {
+                "$ref": "#/$defs/condition"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^SRC-[0-9]{3}$"
+                }
+              },
+              "rule_status": {
+                "enum": [
+                  "active",
+                  "review_required"
+                ]
+              },
+              "effective_from": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "effective_to": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "args"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "all",
+                "any"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/condition"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "field",
+            "value"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "eq",
+                "ne",
+                "in",
+                "gt",
+                "ge",
+                "le"
+              ]
+            },
+            "field": {
+              "type": "string"
+            },
+            "value": {}
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
