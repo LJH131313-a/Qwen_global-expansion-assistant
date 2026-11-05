@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "updatedAt": "2026-11-04",
+  "profiles": [
+    { "market": "SG", "product_type": "kettle", "hs": "85167910", "origin_scope": "ANY", "effective_from": "2026-01-01", "effective_to": "2026-12-31", "ordinaryRate": 0, "sourceIds": ["SRC-168", "SRC-170"] },
+    { "market": "SG", "product_type": "toaster", "hs": "85167200", "origin_scope": "ANY", "effective_from": "2026-01-01", "effective_to": "2026-12-31", "ordinaryRate": 0, "sourceIds": ["SRC-168", "SRC-170"] },
+    { "market": "SG", "product_type": "hair_dryer", "hs": "851631", "origin_scope": "ANY", "effective_from": "2026-01-01", "effective_to": "2026-12-31", "ordinaryRate": 0, "sourceIds": ["SRC-168", "SRC-170"], "note": "HS6方向已核；最终8位码待归类复核" },
+    { "market": "SG", "product_type": "iron", "hs": "851640", "origin_scope": "ANY", "effective_from": "2026-01-01", "effective_to": "2026-12-31", "ordinaryRate": 0, "sourceIds": ["SRC-168", "SRC-170"], "note": "HS6方向已核；最终8位码待归类复核" },
+    { "market": "AU", "product_type": "kettle", "hs": "85167900", "origin_scope": "ANY", "effective_from": "2026-07-01", "effective_to": "2027-06-30", "ordinaryRate": 0.05, "sourceIds": ["SRC-177"] },
+    { "market": "AU", "product_type": "toaster", "hs": "85167200", "origin_scope": "ANY", "effective_from": "2026-07-01", "effective_to": "2027-06-30", "ordinaryRate": 0, "sourceIds": ["SRC-177"] },
+    { "market": "AU", "product_type": "hair_dryer", "hs": "85163100", "origin_scope": "ANY", "effective_from": "2026-07-01", "effective_to": "2027-06-30", "ordinaryRate": 0, "sourceIds": ["SRC-177"] },
+    { "market": "AU", "product_type": "iron", "hs": "85164000", "origin_scope": "ANY", "effective_from": "2026-07-01", "effective_to": "2027-06-30", "ordinaryRate": 0, "sourceIds": ["SRC-177"] }
+  ]
+}
