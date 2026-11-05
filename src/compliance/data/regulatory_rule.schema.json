@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "可扩展政策合规规则模型",
+  "type": "object",
+  "required": ["schemaVersion", "sourceDatasetAsOf", "model", "controlledVocabularies", "rules"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "sourceDatasetAsOf": { "type": "string", "format": "date" },
+    "model": { "const": "国家与地区＋产品特征＋经营主体＋适用条件＋法规版本" },
+    "controlledVocabularies": { "type": "object" },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ruleId", "jurisdiction", "product", "actors", "applicability", "obligation", "regulationVersion", "evidence", "lifecycle"],
+        "properties": {
+          "ruleId": { "type": "string" },
+          "jurisdiction": {
+            "type": "object",
+            "required": ["code", "regulatoryScope"],
+            "properties": {
+              "code": { "type": "string" },
+              "subdivision": { "type": ["string", "null"] },
+              "regulatoryScope": { "type": "string" }
+            }
+          },
+          "product": {
+            "type": "object",
+            "required": ["categoryValues", "featureCondition"],
+            "properties": {
+              "categoryValues": { "type": "array" },
+              "featureCondition": { "$ref": "dataset.schema.json#/$defs/condition" },
+              "exclusions": { "type": ["object", "null"] }
+            }
+          },
+          "actors": {
+            "type": "object",
+            "required": ["businessModels", "responsibilityHints", "supportedInputDimensions"]
+          },
+          "applicability": {
+            "type": "object",
+            "required": ["trigger", "unknownBehavior"]
+          },
+          "obligation": {
+            "type": "object",
+            "required": ["name", "summary", "actionIds", "materialIds"]
+          },
+          "regulationVersion": {
+            "type": "object",
+            "required": ["regulationId", "name", "verificationStatus", "verificationDate"]
+          },
+          "evidence": {
+            "type": "object",
+            "required": ["locator", "sourceIds", "officialUrls", "humanReview"]
+          },
+          "lifecycle": {
+            "type": "object",
+            "required": ["status"]
+          }
+        }
+      }
+    }
+  }
+}
