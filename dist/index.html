@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向中国小家电出海企业的政策合规初筛与进口税费测算工作台">
+  <title>远见 · 企业出海助手</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./integration.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" data-nav="overview" aria-label="返回总览">
+        <span class="brand-mark">远</span>
+        <span><strong>远见合规</strong><small>企业出海助手 · 小家电首期</small></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="snapshot"><i></i> 资料核验至 2026-11-04</span>
+        <button class="language-switch" id="language-switch" type="button" aria-label="切换页面语言">EN</button>
+        <button class="ghost-button" id="export-json" type="button">导出项目数据</button>
+      </div>
+    </header>
+
+    <aside class="sidebar" aria-label="工作台导航">
+      <nav>
+        <button class="nav-item active" data-nav="overview" type="button"><span>01</span>任务总览</button>
+        <button class="nav-item" data-nav="scenario" type="button"><span>02</span>产品与情景</button>
+        <button class="nav-item" data-nav="compliance" type="button"><span>03</span>合规初筛与 HS 归类</button>
+        <button class="nav-item" data-nav="tax" type="button"><span>04</span>税费测算</button>
+        <button class="nav-item" data-nav="policies" type="button"><span>05</span>法规资料库</button>
+        <button class="nav-item" data-nav="report" type="button"><span>06</span>综合报告</button>
+        <button class="nav-item" data-nav="radar" type="button"><span>07</span>政策与舆情雷达</button>
+        <button class="nav-item" data-nav="companies" type="button"><span>08</span>企业研究档案</button>
+        <button class="nav-item" data-nav="advice" type="button"><span>09</span>千问建议中心</button>
+      </nav>
+      <div class="sidebar-note">
+        <p>本工具提供条件初筛，不替代检测认证、法律意见或海关决定。</p>
+        <button class="text-button" data-nav="about" type="button">查看支持边界 →</button>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <section class="panel active" id="panel-overview" data-panel="overview">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">小家电出口政策合规工作台</p>
+            <h1>让每一步出海，<br>都有依据可循</h1>
+            <p class="hero-copy">把企业档案、政策法规、新闻线索与税费测算连在一起，形成可追溯的行动建议。先补齐事实，再判断下一步。</p>
+            <div class="hero-capabilities" aria-label="主要功能"><span>法规资料检索</span><span>条件合规初筛</span><span>HS 候选归类</span><span>进口税费复算</span><span>政策与舆情雷达</span><span>千问辅助建议</span></div>
+            <div class="hero-actions">
+              <button class="primary-button" data-nav="scenario" type="button">开始产品评估</button>
+            </div>
+          </div>
+          <div class="route-card" aria-label="评估流程">
+            <div class="route-step done"><b>1</b><span>登记产品与目标市场<small>建立统一业务情景</small></span></div>
+            <div class="route-line"></div>
+            <div class="route-step"><b>2</b><span>法规初筛与 HS 归类<small>分别依据规则与归类事实</small></span></div>
+            <div class="route-line"></div>
+            <div class="route-step"><b>3</b><span>行动、税费与综合报告<small>可复算、可追溯</small></span></div>
+          </div>
+        </div>
+
+        <section class="process-guide" aria-labelledby="process-title">
+          <div class="process-guide-head"><div><p class="eyebrow">功能关系</p><h2 id="process-title">一次录入，依次形成可执行结论</h2></div><p>HS 候选归类与法规匹配共用产品事实，但采用各自独立的依据；税费测算使用选定的 HS 候选，不代表最终海关归类。</p></div>
+          <div class="process-flow">
+            <button type="button" data-nav="scenario"><b>01</b><span>产品与情景输入<small>目的地、产品特征、责任主体</small></span></button>
+            <i aria-hidden="true">→</i>
+            <button type="button" data-nav="compliance"><b>02</b><span>HS 候选归类<small>编码方向、排除依据、复核状态</small></span></button>
+            <i aria-hidden="true">→</i>
+            <button type="button" data-nav="policies"><b>03</b><span>法规资料匹配<small>法域、主题、版本与来源</small></span></button>
+            <i aria-hidden="true">→</i>
+            <button type="button" data-nav="compliance"><b>04</b><span>合规初筛<small>适用性、行动与材料清单</small></span></button>
+            <i aria-hidden="true">→</i>
+            <button type="button" data-nav="tax"><b>05</b><span>税费测算<small>税基、税率、规费与承担方</small></span></button>
+            <i aria-hidden="true">→</i>
+            <button type="button" data-nav="report"><b>06</b><span>综合结果<small>未决问题、依据与导出</small></span></button>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <div><p class="eyebrow">服务级别</p><h2>先确认当前组合能得到什么结果</h2></div>
+          <p>级别按“产品小类 × 目标市场 × 适用条件”确定。同一产品在不同市场可能获得不同服务。</p>
+        </div>
+        <div class="support-grid service-level-grid">
+          <article class="support-card featured service-level-card">
+            <span class="level">L3 · 合规初筛与税费复算</span>
+            <h3>可形成完整准备路径</h3>
+            <ul><li>条件法规判断与材料清单</li><li>目的国 HS 候选</li><li>已核税费分项复算</li></ul>
+            <details><summary>查看当前范围</summary><p>当前以新加坡电热水壶、烤片机等已有完整税费画像的组合为主。</p></details>
+          </article>
+          <article class="support-card service-level-card">
+            <span class="level amber">L2 · 产品特定初筛</span>
+            <h3>可形成有依据的准备清单</h3>
+            <ul><li>按产品配置动态追问</li><li>区分适用、暂不适用与待确认</li><li>输出行动材料和明确缺口</li></ul>
+            <details><summary>查看当前范围</summary><p>45 个 M2/M3 产品小类可在已有已核规则的法域中进行条件初筛；税费与 HS 覆盖因市场而异。</p></details>
+          </article>
+          <article class="support-card muted service-level-card">
+            <span class="level grey">L1 · 资料检索</span>
+            <h3>可查来源并确定下一步</h3>
+            <ul><li>检索法规与官方文件</li><li>显示具体资料缺口</li><li>转人工归类或专业核验</li></ul>
+            <details><summary>查看当前范围</summary><p>包括 12 个证据仍待补强的小类，以及尚无产品特定可执行规则的国家和地区。</p></details>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-scenario" data-panel="scenario">
+        <div class="page-title">
+          <div><p class="eyebrow">产品评估 · 第一步</p><h1>建立产品与进入情景</h1></div>
+          <span class="draft-state" id="draft-state">输入与清单状态可持续保存</span>
+        </div>
+        <div class="notice info"><strong>先填影响判断的事实。</strong> 不清楚可以留空，系统会说明它阻断了哪些结论。</div>
+
+        <form id="scenario-form" class="form-stack">
+          <fieldset class="form-card">
+            <legend><span>01</span>目的地与产品</legend>
+            <div class="form-grid three">
+              <label>目标市场<select data-key="market" data-option-set="jurisdictions"></select><small>决定可用规则和支持级别；L1 市场仅提供资料检索</small></label>
+              <label class="conditional" data-show="market:AU">澳洲销售州<select data-key="sales_state"><option value="">暂不清楚</option><option value="VIC">维多利亚州 VIC</option><option value="other">其他州</option></select><small>本版只有 VIC 条件路径</small></label>
+              <label>计划进口日期<input type="date" data-key="import_date"><small>晚于快照日期需重新核验</small></label>
+              <label>产品类别<select data-key="product_type" data-option-set="products"></select><small id="product-support-note">当前支持规则计算</small></label>
+              <div class="support-legend" aria-label="服务支持图例"><span class="dot green"></span>可测算 <span class="dot amber"></span>可初筛 <span class="dot red"></span>资料导航</div>
+              <label>企业名称<input data-key="company_name" maxlength="100" placeholder="填写企业名称"></label><label>产品名称<input data-key="product_name" maxlength="100" placeholder="例如：1.7L 电热水壶"></label>
+              <label>型号 / SKU<input data-key="sku" maxlength="80" placeholder="企业内部型号"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-card">
+            <legend><span>02</span>产品用途与技术特征</legend>
+            <div class="form-grid three">
+              <label>主要功能<select data-key="main_function" id="main-function"></select></label>
+              <label>家用产品？<select data-key="household"><option value="">暂不清楚</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label>最终用途<select data-key="end_use"><option value="">暂不清楚</option><option value="consumer">家庭消费者</option><option value="commercial">仅商用且有渠道控制</option></select></label>
+              <div id="product-dynamic-fields" class="dynamic-fields"></div>
+              <label>完整设备进口？<select data-key="complete_unit"><option value="">暂不清楚</option><option value="true">是，完整设备</option><option value="false">否，零件/不完整设备</option></select></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-card">
+            <legend><span>03</span>经营与责任角色</legend>
+            <div class="form-grid three">
+              <label>销售渠道<select data-key="channel" data-option-set="channels"></select></label>
+              <label>进口与履约路线<select data-key="import_route" data-option-set="importRoutes"></select></label>
+              <label>制造安排<select data-key="manufacturer_type" data-option-set="manufacturerTypes"></select></label>
+              <label>进口申报主体<select data-key="importer_role" data-option-set="importerRoles"></select><small>用于分配进口、注册及留档责任</small></label>
+              <label>品牌方所在地<select data-key="brand_owner_location" data-option-set="brandOwnerLocations"></select></label>
+              <label>当地注册供应商已确定？<select data-key="local_supplier"><option value="">暂不清楚</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label>现有产品注册<select data-key="existing_registration"><option value="false">无 / 尚未取得</option><option value="true">有</option><option value="">不清楚</option></select></label>
+              <label>现有注册是否过期<select data-key="registration_expired"><option value="false">否 / 不适用</option><option value="true">是</option><option value="">不清楚</option></select></label>
+              <label>是否改品牌或关键部件<select data-key="modified"><option value="false">否</option><option value="true">是</option><option value="">不清楚</option></select></label>
+              <label>特殊估价事实<select data-key="special_valuation"><option value="false">无</option><option value="true">有：关联/赠品/模具/许可费等</option><option value="">不清楚</option></select></label>
+              <label>包装义务主体上年营业额<input type="number" data-key="packaging_turnover" min="0" step="1" placeholder="SGD"></label>
+              <label>使用指定包装<select data-key="specified_packaging"><option value="">暂不清楚</option><option value="true">是</option><option value="false">否</option></select></label>
+            </div>
+          </fieldset>
+
+          <div class="sticky-actions">
+            <span id="support-indicator" class="support-indicator"></span>
+            <button type="reset" class="ghost-button">清空</button>
+            <button type="submit" class="primary-button">运行合规初筛</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="panel-compliance" data-panel="compliance">
+        <div class="page-title"><div><p class="eyebrow">产品评估 · 第二步</p><h1>合规初筛、HS 候选与行动清单</h1></div><button class="secondary-button" data-nav="scenario" type="button">修改输入</button></div>
+        <div id="evaluation-empty" class="empty-state"><span>⌁</span><h2>尚未运行初筛</h2><p>先登记产品与目标市场，系统才会基于结构化规则生成结果。</p><button class="primary-button" data-nav="scenario" type="button">前往登记</button></div>
+        <div id="evaluation-results" hidden>
+          <div id="coverage-notice"></div>
+          <div class="result-summary" id="result-summary"></div>
+          <div id="question-block"></div>
+          <div class="section-heading compact"><div><p class="eyebrow">HS 候选</p><h2>归类方向与复核状态</h2></div><p>用户选用仅用于估算，不增加法律效力。</p></div>
+          <div id="hs-results" class="card-list"></div>
+          <div class="section-heading compact"><div><p class="eyebrow">适用性初筛</p><h2>法规条件结果</h2></div><p>“不适用”只针对单条规则，不代表产品整体无要求。</p></div>
+          <div id="rule-results" class="card-list"></div>
+          <div class="section-heading compact"><div><p class="eyebrow">可执行清单</p><h2>行动与材料 To-do</h2></div><p>企业准备状态与专业复核状态分别记录。</p></div>
+          <div id="todo-results" class="card-list"></div>
+          <div class="next-step-bar"><div><strong>合规准备与税费测算可以并行</strong><span>税费结果不代表产品已经获准进口或销售。</span></div><button class="primary-button" data-nav="tax" type="button">进入税费测算</button></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-tax" data-panel="tax">
+        <div class="page-title"><div><p class="eyebrow">产品评估 · 第三步</p><h1>进口税费与承担情景</h1></div><span class="badge outline">规则确定性计算</span></div>
+        <div class="notice warning"><strong>贸易术语不会直接改变法定税率。</strong> 它影响费用是否已包含以及买卖双方的合同承担；进口资格、抵扣和海关估价需另核。</div>
+        <div class="split-layout">
+          <form id="tax-form" class="form-card tax-form">
+            <h2>交易输入</h2>
+            <div class="form-grid two">
+              <label>原产地<select data-key="origin" data-option-set="origins"></select></label>
+              <label>使用 HS 编码<input data-key="hs_candidate" placeholder="先在合规页选用候选"></label>
+              <label>数量<input type="number" data-key="quantity" min="1" step="1" placeholder="1000"></label>
+              <label>交易币种<select data-key="currency" data-option-set="currencies"></select></label>
+              <label>换算至目的国计税货币的汇率<input type="number" data-key="fx_rate" min="0" step="0.000001" placeholder="仅非本币交易填写"><small>1单位交易币种可兑换的目的国计税货币</small></label>
+              <label>汇率来源及日期<input data-key="fx_source" maxlength="120" placeholder="例如：海关公布汇率，2026-11-03"></label>
+              <label>贸易术语（Incoterms® 2020）<select data-key="incoterm" data-option-set="incoterms"></select></label>
+              <label>主要运输方式<select data-key="transport" data-option-set="transportModes"></select></label>
+              <label>商品金额 / CV<input type="number" data-key="goods_value" min="0" step="0.01" placeholder="20000"></label>
+              <label>价格基础<select data-key="price_basis"><option value="FOB_excludes_TI">FOB / 未含国际运保</option><option value="CIF_includes_TI">CIF / 已含国际运保</option><option value="DDP_total">DDP 含税总价</option></select></label>
+              <label>国际运费<input type="number" data-key="freight" min="0" step="0.01" placeholder="1500"></label>
+              <label>保险费<input type="number" data-key="insurance" min="0" step="0.01" placeholder="100"></label>
+              <label>进口前多次销售<select data-key="multiple_sales"><option value="false">否</option><option value="true">是</option></select></label>
+              <label class="conditional" data-show="multiple_sales:true">最后买方申报价<input type="number" data-key="lsp" min="0" step="0.01"></label>
+              <label class="conditional" data-show="multiple_sales:true">最后买方为申报人<select data-key="last_buyer_is_declarant"><option value="">待核</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label class="conditional" data-show="market:AU">关税情景<select data-key="origin_preference"><option value="none">普通税率</option><option value="reviewed">ChAFTA 条件已复核</option></select></label>
+              <label class="conditional" data-show="origin_preference:reviewed">原产 PSR 满足<select data-key="origin_psr_satisfied"><option value="">待核</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label class="conditional" data-show="origin_preference:reviewed">原产证明有效<select data-key="origin_documents_valid"><option value="">待核</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label class="conditional" data-show="origin_preference:reviewed">运输条件满足<select data-key="transport_conditions_satisfied"><option value="">待核</option><option value="true">是</option><option value="false">否</option></select></label>
+              <label>本票附加措施核验<select data-key="remedy_check"><option value="">尚未核验</option><option value="confirmed_clear">已由专业人员确认无其他措施</option></select></label>
+              <label>估价状态<select data-key="valuation_professionally_confirmed"><option value="false">未专业确认</option><option value="true">已专业确认</option></select></label>
+              <label class="conditional" data-show="incoterm:DDP">DDP 经确认海关价值<input type="number" data-key="confirmed_customs_value" min="0" step="0.01"></label>
+            </div>
+            <button class="primary-button wide" type="submit">复算税费</button>
+          </form>
+          <div class="tax-output" id="tax-output">
+            <div class="empty-state small"><span>∑</span><h2>等待交易输入</h2><p>结果将逐项显示税率、税基、金额、承担主体和来源。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-policies" data-panel="policies">
+        <div class="page-title"><div><p class="eyebrow">法规资料库</p><h1>检索经过索引的法规与官方指南</h1></div><span class="badge outline" id="policy-library-count">法规索引</span></div>
+        <div class="notice info"><strong>检索范围：</strong>仅检索本项目的法规索引，不连接通用知识库或网页全文搜索；结果应结合核验状态和法规版本阅读。</div>
+        <form id="policy-search" class="search-bar">
+          <label><span>关键词</span><input name="q" maxlength="120" autocomplete="off" placeholder="法规名称、编号、机构、主题或产品"></label>
+          <label><span>法域</span><select name="market" data-option-set="policyJurisdictions"></select></label>
+          <label><span>监管主题</span><select name="topic" id="topic-filter"><option value="ALL">全部主题</option></select></label>
+          <button class="primary-button" type="submit">检索</button>
+        </form>
+        <p class="result-count" id="policy-count"></p>
+        <div id="policy-results" class="policy-list"></div>
+      </section>
+
+      <section class="panel" id="panel-report" data-panel="report">
+        <div class="page-title no-print"><div><p class="eyebrow">阶段交付</p><h1>综合初筛报告</h1></div><div class="button-group"><button class="secondary-button" id="refresh-report" type="button">刷新报告</button><button class="primary-button" id="print-report" type="button">打印 / 导出 PDF</button></div></div>
+        <article id="report-content" class="report-paper">
+          <div class="empty-state small"><span>▤</span><h2>尚无报告内容</h2><p>完成至少一次合规初筛后生成。</p></div>
+        </article>
+      </section>
+
+      <section class="panel" id="panel-about" data-panel="about">
+        <div class="page-title"><div><p class="eyebrow">证据与边界</p><h1>我们明确知道什么，也明确保留什么</h1></div></div>
+        <div class="about-grid">
+          <article class="form-card"><h2>数据快照</h2><div id="about-meta"></div></article>
+          <article class="form-card boundary-card"><h2>三条不会越过的边界</h2><ol class="number-list"><li><div><b>未知不等于不适用。</b><span>缺失信息保持为“待补充”，不会自动按“否”或零值处理。</span></div></li><li><div><b>材料已准备不等于正式合规。</b><span>企业准备状态与专业复核状态分别记录。</span></div></li><li><div><b>已核分项不等于完整总额。</b><span>关键税率或附加措施尚未核实时，完整总额保持为空。</span></div></li></ol></article>
+        </div>
+        <div class="section-heading compact"><div><p class="eyebrow">优先核验事项</p><h2>进入正式申报前仍需关闭</h2></div></div>
+        <div id="gap-list" class="card-list"></div>
+      </section>
+<section class="panel" data-panel="radar" id="panel-radar">
+ <div class="page-title"><div><p class="eyebrow">发现变化 · 核验依据 · 形成待办</p><h1>政策与舆情雷达</h1></div><button id="reload-news" class="secondary-button">重新读取快照</button></div>
+ <div class="notice info">当前是定时采集快照。官方新闻也不等于已生效法规；每条线索需回到原文核验。首期来源以政府公告为主，尚未接入社交平台情感监测。</div>
+ <p id="news-status" role="status">正在读取交付快照…</p>
+ <div class="search-bar"><label>市场<select id="news-market"><option value="">全部市场</option></select></label><label>主题<select id="news-category"><option value="">全部主题</option></select></label><label>关键词<input id="news-query" placeholder="产品、机构或事件"></label><label>关联项目<select id="news-scope"><option value="all">全部线索</option><option value="project">当前项目市场</option></select></label></div>
+ <p id="news-count"></p><div id="news-items" class="card-list"></div>
+</section>
+<section class="panel" data-panel="companies" id="panel-companies">
+ <div class="page-title"><div><p class="eyebrow">企业事实 → 产品参数 → 目标市场</p><h1>企业研究档案</h1></div><a class="secondary-button" href="./research.html" target="_blank" rel="noopener">打开完整前置研究 ↗</a></div>
+ <div class="notice info">整合现有研究中的两家企业作为验证案例。公开型号用于研究，不代表出口款已完成认证，也不表示企业已经向该市场出口。导入时未知参数保持为空。</div>
+ <div class="company-grid">
+ <article class="form-card"><p class="eyebrow">01 / 厨房小家电</p><h2>小熊电器</h2><p>研究路线：电饭煲 → 马来西亚半岛</p><h3>DFB-B12F1 / DFB-P20H1</h3><p>官网资料分别标示 300 W、1.2 L 和 600 W、3 L。额定容量与最大煮饭容量不可混用；出口款参数需单独确认。</p><p><a href="https://www.bears.com.cn/products/kitcheninfo.html?id=175" target="_blank" rel="noopener">300 W 产品资料 ↗</a> · <a href="https://www.bears.com.cn/products/kitcheninfo.html?id=199" target="_blank" rel="noopener">600 W 产品资料 ↗</a></p><p class="notice">优先追问：最大煮饭容量、加热方式、当地进口商与安全审批材料。</p><button class="primary-button" data-company="bear">带入研究情景</button></article>
+ <article class="form-card"><p class="eyebrow">02 / 清洁家电</p><h2>石头科技</h2><p>研究路线：扫拖机器人 → 德国</p><h3>S8 MaxV Ultra</h3><p>核对整套设备及随箱基站的地区版。10,000 Pa 是吸力，不能作为额定功率。120 V 基站与 220–240 V 基站需要分别核验。</p><p><a href="https://de.roborock.com/products/roborock-s8-maxv-ultra-saugroboter-mit-8-in-1-rockdock-ultra" target="_blank" rel="noopener">德国官方产品资料 ↗</a></p><p class="notice">优先追问：随箱基站型号、额定输入、电池与无线配置、欧盟责任主体。</p><button class="primary-button" data-company="roborock">带入研究情景</button></article>
+ </div>
+</section>
+<section class="panel" data-panel="advice" id="panel-advice">
+ <div class="page-title"><div><p class="eyebrow">千问办公 · 人工辅助分析</p><h1>从证据到行动建议</h1></div><span class="badge outline">手动闭环 · 未接 API</span></div>
+ <div class="notice info">先运行合规初筛和税费测算，再生成分析任务。将任务复制到千问办公，粘贴返回的建议并保存，即可合并到综合报告。规则提示与千问回复分别标注。</div>
+ <div class="company-grid"><article class="form-card"><h2>1. 准备证据任务</h2><p>自动汇总当前项目、规则结果、税费缺口与所选新闻。最多可选 8 条新闻；未选择时采用当前市场最近 5 条。</p><button id="make-prompt" class="primary-button">生成千问分析任务</button><label>可复制的分析任务<textarea id="qwen-prompt" rows="15" readonly placeholder="生成后显示项目证据与分析要求"></textarea></label><button id="copy-prompt" class="secondary-button">复制任务</button></article>
+ <article class="form-card"><h2>2. 保存千问建议</h2><p>请检查引用、日期与假设。保存的文本会标注为“用户从千问导入，尚待人工复核”。</p><label>粘贴千问回复<textarea id="qwen-answer" rows="15" maxlength="50000" placeholder="粘贴千问返回的完整分析"></textarea></label><button id="save-answer" class="primary-button">保存并合并到报告</button><p id="answer-status" role="status"></p></article></div>
+ <article class="form-card" style="margin-top:24px"><h2>当前项目的规则准备提示</h2><div id="advice-summary">完成合规初筛后，生成分析任务查看。</div><button id="clear-answer" class="text-button">清除本机保存的千问建议</button></article>
+</section>
+
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./i18n.js" defer></script>
+  <script src="./core.js" defer></script>
+  <script src="./app.js" defer></script>
+  <script src="./integration.js" defer></script>
+</body>
+</html>
