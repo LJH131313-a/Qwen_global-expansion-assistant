@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "updatedAt": "2026-11-04",
+  "levelDefinitions": {
+    "L1": "资料导航：可检索已收录来源并显示覆盖缺口；不自动给出产品特定适用性或税额。",
+    "L2": "结构化初筛：具有产品特征追问、条件规则、行动材料清单和HS候选；金额测算可因税率或措施数据不足而阻断。",
+    "L3": "可复算路径：在L2基础上，普通交易情景的税基、税率和法定分项已有版本化官方依据及回归测试；仍不等于正式合规或最终归类。"
+  },
+  "levelDefinitionsEn": {
+    "L1": "Source navigation: search indexed sources and view coverage gaps; no product-specific applicability conclusion or tax amount is generated.",
+    "L2": "Structured screening: product-feature questions, conditional rules, action/material lists and HS candidates are available; tax totals may be withheld when rates or measures are incomplete.",
+    "L3": "Reproducible path: includes L2 plus versioned official support and regression checks for the tax base, rates and statutory items in a standard transaction; it is not formal compliance or final classification."
+  },
+  "profiles": [
+    { "market": "SG", "product_type": "kettle", "level": "L3", "label": "可复算主路径", "product_id": "P-KET-01" },
+    { "market": "SG", "product_type": "toaster", "level": "L3", "label": "可复算主路径", "product_id": "P-TST-01" },
+    { "market": "AU", "product_type": "kettle", "level": "L2", "label": "维州条件路径", "product_id": "P-KET-01" },
+    { "market": "AU", "product_type": "toaster", "level": "L2", "label": "维州条件路径", "product_id": "P-TST-01" },
+    { "market": "SG", "product_type": "hair_dryer", "level": "L2", "label": "CPSR产品特定初筛", "product_id": "P-HDR-01" },
+    { "market": "SG", "product_type": "iron", "level": "L2", "label": "CPSR产品特定初筛", "product_id": "P-IRN-01" },
+    { "market": "AU", "product_type": "hair_dryer", "level": "L2", "label": "EESS产品特定初筛", "product_id": "P-HDR-01" },
+    { "market": "AU", "product_type": "iron", "level": "L2", "label": "EESS产品特定初筛", "product_id": "P-IRN-01" }
+  ]
+}
