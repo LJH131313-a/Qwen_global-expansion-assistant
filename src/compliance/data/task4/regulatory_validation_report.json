@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-11-04T11:36:22.540765+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "jurisdiction_ids_unique",
+      "pass": true,
+      "detail": 54
+    },
+    {
+      "name": "source_ids_unique",
+      "pass": true,
+      "detail": 245
+    },
+    {
+      "name": "regulation_ids_unique",
+      "pass": true,
+      "detail": 79
+    },
+    {
+      "name": "rule_ids_unique",
+      "pass": true,
+      "detail": 56
+    },
+    {
+      "name": "original_regulation_ids_preserved",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "original_rule_ids_preserved",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "original_source_ids_preserved",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "regulation_source_references",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "rule_regulation_references",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "rule_source_references",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "rule_locators_present",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "rule_jurisdictions_valid",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "product_link_subcategories",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "product_link_rules",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "coverage_matrix_complete_topics",
+      "pass": true,
+      "detail": {
+        "MT": 13,
+        "DE": 13,
+        "SE": 13,
+        "NL": 13,
+        "SG": 13,
+        "CZ": 13,
+        "IE": 13,
+        "EE": 13,
+        "AT": 13,
+        "LT": 13,
+        "UK_GB": 13,
+        "CY": 13,
+        "AE": 13,
+        "BE": 13,
+        "FR": 13,
+        "VN": 13,
+        "CL": 13,
+        "RCEP": 13,
+        "PL": 13,
+        "GCC": 13,
+        "MY": 13,
+        "EAEU": 13,
+        "AU": 13,
+        "CA": 13,
+        "GR": 13,
+        "KR": 13,
+        "HR": 13,
+        "MX": 13,
+        "PT": 13,
+        "DK": 13,
+        "FI": 13,
+        "IN": 13,
+        "BR": 13,
+        "HU": 13,
+        "JP": 13,
+        "TR": 13,
+        "EU": 13,
+        "SA": 13,
+        "ZA": 13,
+        "BG": 13,
+        "TW": 13,
+        "CN_RCEP": 13,
+        "SI": 13,
+        "ES": 13,
+        "US": 13,
+        "PH": 13,
+        "TH": 13,
+        "RO": 13,
+        "AR": 13,
+        "LV": 13,
+        "IT": 13,
+        "LU": 13,
+        "ID": 13,
+        "SK": 13
+      }
+    },
+    {
+      "name": "netherlands_inherits_eu",
+      "pass": true,
+      "detail": "NL -> EU"
+    },
+    {
+      "name": "gb_does_not_inherit_eu",
+      "pass": true,
+      "detail": "UK_GB separate"
+    },
+    {
+      "name": "rule_scenarios",
+      "pass": true,
+      "detail": {
+        "NL-KETTLE": true,
+        "NL-SMART-PURIFIER": true,
+        "NL-WIRELESS-UNKNOWN": true,
+        "NL-BATTERY-NO": true,
+        "NL-BATTERY-YES": true,
+        "SG-NO-EU": true,
+        "GB-RADIO": true,
+        "US-WIRELESS-NO": true
+      }
+    },
+    {
+      "name": "registered_pdf_hashes",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "local_pdfs_readable",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "duplicate_pdf_mapping_reviewed",
+      "pass": true,
+      "detail": {
+        "74747115815219db3f76e0a4efbed9316a531e9f73e2cf4a5af413657509c3ab": [
+          "SRC-138",
+          "SRC-139"
+        ]
+      }
+    },
+    {
+      "name": "hs_tax_issue_types_separated",
+      "pass": true,
+      "detail": {
+        "data_gap": 1,
+        "mapping_gap": 1,
+        "model_logic_gap": 1,
+        "intended_safety_gate": 1,
+        "date_gap": 1,
+        "source_update": 1,
+        "logic_risk": 1
+      }
+    },
+    {
+      "name": "dead_links_not_marked_verified",
+      "pass": true,
+      "detail": [
+        "SRC-195",
+        "SRC-199"
+      ]
+    }
+  ],
+  "counts": {
+    "jurisdictions": 54,
+    "sources": 245,
+    "regulations": 79,
+    "rules": 56,
+    "product_rule_links": 675,
+    "coverage_cells": 702,
+    "local_pdfs": 148
+  }
+}
