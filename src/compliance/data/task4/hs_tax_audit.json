@@ -1,0 +1,65 @@
+[
+  {
+    "issue_id": "HT-001",
+    "type": "data_gap",
+    "severity": "critical",
+    "scope": "HS candidates",
+    "finding": "仅7条目的国HS候选，覆盖{'SG': 4, 'AU': 3}；与57个叶子小类不匹配。",
+    "impact": "除少数SG/AU旧产品外无法生成目的国HS候选。",
+    "resolution": "按市场+小类+配置+日期建立候选及裁定证据。"
+  },
+  {
+    "issue_id": "HT-002",
+    "type": "mapping_gap",
+    "severity": "critical",
+    "scope": "product IDs",
+    "finding": "HS候选仍引用旧product_id，未映射专项任务二的subcategory_id。",
+    "impact": "新产品库不能直接命中现有HS候选。",
+    "resolution": "建立legacy_product_id到subcategory_id迁移表。"
+  },
+  {
+    "issue_id": "HT-003",
+    "type": "model_logic_gap",
+    "severity": "critical",
+    "scope": "tax profile selection",
+    "finding": "现有税费画像仅按market+product_type选择，未把HS、原产地和适用日期作为主键。",
+    "impact": "无法保证税率与目的地、配置、原产地和日期一致。",
+    "resolution": "改为market+hs_code+origin+effective_from/effective_to，并保留措施状态。"
+  },
+  {
+    "issue_id": "HT-004",
+    "type": "intended_safety_gate",
+    "severity": "info",
+    "scope": "complete total",
+    "finding": "贸易救济/附加措施未确认时完整总额为null。",
+    "impact": "阻断完整总额，但普通关税/GST等已知分项仍可显示。",
+    "resolution": "保留安全门；界面明确区分已知分项与未确认总额。"
+  },
+  {
+    "issue_id": "HT-005",
+    "type": "date_gap",
+    "severity": "high",
+    "scope": "tax rules",
+    "finding": "部分税率effective_from为空，税费快照为2026-11-03。",
+    "impact": "无法对未来或历史进口日期自动选版。",
+    "resolution": "补齐法定起止日和版本链，超出快照日期自动阻断。"
+  },
+  {
+    "issue_id": "HT-006",
+    "type": "source_update",
+    "severity": "high",
+    "scope": "SG TradeNet fee",
+    "finding": "SRC-203自动探测404但浏览器仍可读取2024通告；运营商处理费属于动态费用。",
+    "impact": "不能把2024典型处理费当作永久法定费率。",
+    "resolution": "法定费与运营商费拆分，按当前TradeNet运营商价目更新。"
+  },
+  {
+    "issue_id": "HT-007",
+    "type": "logic_risk",
+    "severity": "high",
+    "scope": "AU ChAFTA",
+    "finding": "优惠资格由用户布尔值声明，未实际运行HS特定原产地规则。",
+    "impact": "零关税情景不能作为已确认结果。",
+    "resolution": "将PSR、原产材料、直接运输和证据文件结构化后再启用。"
+  }
+]
