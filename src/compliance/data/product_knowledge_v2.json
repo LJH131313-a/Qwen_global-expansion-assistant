@@ -1,0 +1,5871 @@
+{
+  "schemaVersion": "2.0",
+  "updatedAt": "2026-11-04",
+  "model": "国家/地区 + 产品小类与产品特征 + 经营主体 + 适用条件 + 法规版本；HS与税费依据独立维护",
+  "sourcesNote": "法规定义优先使用项目内官方PDF SRC-164、SRC-206；产品字段以监管定义为主，并用制造商官方规格页交叉验证。",
+  "groups": {
+    "kitchen": {
+      "label": "厨房小家电",
+      "labelEn": "Kitchen appliances"
+    },
+    "cleaning": {
+      "label": "清洁家电",
+      "labelEn": "Cleaning appliances"
+    },
+    "environment": {
+      "label": "空气与环境家电",
+      "labelEn": "Air and climate appliances"
+    },
+    "personal": {
+      "label": "个人护理家电",
+      "labelEn": "Personal care appliances"
+    },
+    "garment": {
+      "label": "衣物护理家电",
+      "labelEn": "Garment care appliances"
+    }
+  },
+  "templates": {
+    "liquid_heating": {
+      "label": "液体加热",
+      "labelEn": "Liquid heating",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "heats_liquid",
+          "type": "select",
+          "label": "是否以加热液体为主要功能",
+          "labelEn": "Is heating liquid a primary function?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "capacity_l",
+          "type": "number",
+          "label": "额定容量",
+          "labelEn": "Rated capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 0.1,
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "portable",
+          "type": "select",
+          "label": "正常使用时是否可移动",
+          "labelEn": "Is it portable in normal use?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "liquid_use",
+          "type": "select",
+          "label": "液体用途",
+          "labelEn": "Intended use of liquid",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "beverage",
+              "label": "热饮或饮用水",
+              "labelEn": "Hot beverages or drinking water"
+            },
+            {
+              "value": "cooking",
+              "label": "烹饪食品",
+              "labelEn": "Food preparation"
+            },
+            {
+              "value": "humidifying",
+              "label": "空气加湿",
+              "labelEn": "Room humidification"
+            },
+            {
+              "value": "other",
+              "label": "其他",
+              "labelEn": "Other"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "max_temperature_c",
+          "type": "number",
+          "label": "最高设定温度",
+          "labelEn": "Maximum set temperature",
+          "unit": "°C",
+          "min": 0,
+          "step": 1,
+          "requiredFor": []
+        }
+      ]
+    },
+    "portable_cooking": {
+      "label": "便携式烹饪",
+      "labelEn": "Portable cooking",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "cooks_or_warms_food",
+          "type": "select",
+          "label": "是否用于烹饪或保温食品",
+          "labelEn": "Does it cook or warm food?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "portable",
+          "type": "select",
+          "label": "是否为台面式或可移动器具",
+          "labelEn": "Is it a benchtop or portable appliance?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "heating_medium",
+          "type": "select",
+          "label": "主要加热介质或方式",
+          "labelEn": "Primary heating medium or method",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "hot_air",
+              "label": "循环热空气",
+              "labelEn": "Circulating hot air"
+            },
+            {
+              "value": "oil",
+              "label": "食用油",
+              "labelEn": "Cooking oil"
+            },
+            {
+              "value": "heated_plate",
+              "label": "加热板／锅体",
+              "labelEn": "Heated plate or vessel"
+            },
+            {
+              "value": "steam",
+              "label": "蒸汽",
+              "labelEn": "Steam"
+            },
+            {
+              "value": "radiant",
+              "label": "辐射／电热管",
+              "labelEn": "Radiant element"
+            },
+            {
+              "value": "induction",
+              "label": "电磁感应",
+              "labelEn": "Induction"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "glass_bowl",
+          "type": "select",
+          "label": "是否配有玻璃烹饪容器",
+          "labelEn": "Does it use a glass cooking bowl?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "pressure_cooking",
+          "type": "select",
+          "label": "是否在压力下烹饪",
+          "labelEn": "Does it cook under pressure?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "cooking_capacity_l",
+          "type": "number",
+          "label": "烹饪容量",
+          "labelEn": "Cooking capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 0.1,
+          "requiredFor": []
+        }
+      ]
+    },
+    "kitchen_machine": {
+      "label": "机械式食品处理",
+      "labelEn": "Mechanical food preparation",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "mechanical_food_prep",
+          "type": "select",
+          "label": "是否通过机械方式处理食品或饮料",
+          "labelEn": "Does it prepare food or beverages mechanically?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "food_process_method",
+          "type": "select",
+          "label": "主要处理方式",
+          "labelEn": "Primary processing method",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "blend",
+              "label": "搅拌／混合",
+              "labelEn": "Blending or mixing"
+            },
+            {
+              "value": "chop",
+              "label": "切碎／切片",
+              "labelEn": "Chopping or slicing"
+            },
+            {
+              "value": "juice",
+              "label": "榨汁",
+              "labelEn": "Juice extraction"
+            },
+            {
+              "value": "knead",
+              "label": "揉面／打发",
+              "labelEn": "Kneading or whipping"
+            },
+            {
+              "value": "multi",
+              "label": "多功能处理",
+              "labelEn": "Multi-function processing"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "heating_function",
+          "type": "select",
+          "label": "是否同时具有加热功能",
+          "labelEn": "Does it also heat?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "container_capacity_l",
+          "type": "number",
+          "label": "处理容器容量",
+          "labelEn": "Container capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 0.1,
+          "requiredFor": []
+        }
+      ]
+    },
+    "microwave": {
+      "label": "微波加热",
+      "labelEn": "Microwave heating",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "microwave_heating",
+          "type": "select",
+          "label": "是否以高频电磁波在腔体内加热",
+          "labelEn": "Does it heat in a chamber using high-frequency electromagnetic energy?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "grill_function",
+          "type": "select",
+          "label": "是否带烧烤功能",
+          "labelEn": "Does it include a grill function?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "built_in",
+          "type": "select",
+          "label": "是否为嵌入式安装",
+          "labelEn": "Is it built in?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "cavity_capacity_l",
+          "type": "number",
+          "label": "腔体容量",
+          "labelEn": "Cavity capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 1,
+          "requiredFor": []
+        }
+      ]
+    },
+    "vacuum": {
+      "label": "吸尘清洁",
+      "labelEn": "Vacuum cleaning",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "suction_cleaning",
+          "type": "select",
+          "label": "是否通过吸力清除尘土、污物或水分",
+          "labelEn": "Does it remove dust, dirt or moisture by suction?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS",
+            "HS"
+          ]
+        },
+        {
+          "key": "portable",
+          "type": "select",
+          "label": "是否为可移动式完整设备",
+          "labelEn": "Is it a portable complete appliance?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "vacuum_mode",
+          "type": "select",
+          "label": "清洁模式",
+          "labelEn": "Cleaning mode",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "dry",
+              "label": "干式吸尘",
+              "labelEn": "Dry vacuuming"
+            },
+            {
+              "value": "wet_dry",
+              "label": "干湿两用",
+              "labelEn": "Wet and dry vacuuming"
+            },
+            {
+              "value": "vacuum_mop",
+              "label": "吸尘与拖地组合",
+              "labelEn": "Vacuuming and mopping"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "motor_power_w",
+          "type": "number",
+          "label": "电机额定功率",
+          "labelEn": "Rated motor power",
+          "unit": "W",
+          "min": 0,
+          "step": 1,
+          "requiredFor": [
+            "HS"
+          ]
+        },
+        {
+          "key": "dust_receptacle_l",
+          "type": "number",
+          "label": "集尘容器容量",
+          "labelEn": "Dust receptacle capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 0.1,
+          "requiredFor": [
+            "HS"
+          ]
+        }
+      ]
+    },
+    "robot_vacuum": {
+      "label": "智能清洁机器人",
+      "labelEn": "Robotic cleaning",
+      "sourceIds": [
+        "SRC-164"
+      ],
+      "fields": [
+        {
+          "key": "robotic",
+          "type": "select",
+          "label": "是否自主移动并执行清洁",
+          "labelEn": "Does it navigate and clean autonomously?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "mapping_sensor",
+          "type": "select",
+          "label": "是否使用激光雷达、摄像头或地图数据",
+          "labelEn": "Does it use LiDAR, cameras or map data?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "mop_function",
+          "type": "select",
+          "label": "是否具有拖地功能",
+          "labelEn": "Does it include mopping?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "mains_dock",
+          "type": "select",
+          "label": "是否配有接入市电的基站",
+          "labelEn": "Is a mains-powered dock supplied?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "dock_dust_removal",
+          "type": "select",
+          "label": "基站是否自动抽取或收集尘土",
+          "labelEn": "Does the dock automatically remove or collect dust?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        }
+      ]
+    },
+    "fan": {
+      "label": "空气循环",
+      "labelEn": "Air circulation",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "moves_air",
+          "type": "select",
+          "label": "主要功能是否为附近空气循环或抽排",
+          "labelEn": "Is moving or extracting nearby air the primary function?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "fan_installation",
+          "type": "select",
+          "label": "风扇结构／安装方式",
+          "labelEn": "Fan construction or installation",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "table",
+              "label": "台式／桌面式",
+              "labelEn": "Table or desk"
+            },
+            {
+              "value": "standing",
+              "label": "落地式／塔式",
+              "labelEn": "Standing or tower"
+            },
+            {
+              "value": "wall",
+              "label": "壁挂式",
+              "labelEn": "Wall mounted"
+            },
+            {
+              "value": "ceiling",
+              "label": "吊扇／循环扇",
+              "labelEn": "Ceiling or cycle fan"
+            },
+            {
+              "value": "duct",
+              "label": "管道／换气扇",
+              "labelEn": "Duct or exhaust fan"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "mist_function",
+          "type": "select",
+          "label": "是否向气流中喷雾",
+          "labelEn": "Does it blow a water mist?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "fan_motor_power_w",
+          "type": "number",
+          "label": "风扇电机功率",
+          "labelEn": "Fan motor power",
+          "unit": "W",
+          "min": 0,
+          "step": 1,
+          "requiredFor": [
+            "HS"
+          ]
+        }
+      ]
+    },
+    "hair_care": {
+      "label": "头发护理",
+      "labelEn": "Hair care",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "hair_care",
+          "type": "select",
+          "label": "是否用于吹干、造型或护理人体头发",
+          "labelEn": "Is it used to dry, style or care for human hair?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "handheld",
+          "type": "select",
+          "label": "正常使用时是否手持",
+          "labelEn": "Is it hand-held during normal use?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "hair_process",
+          "type": "select",
+          "label": "主要护理方式",
+          "labelEn": "Primary hair-care process",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "dry",
+              "label": "吹干",
+              "labelEn": "Drying"
+            },
+            {
+              "value": "straighten",
+              "label": "拉直",
+              "labelEn": "Straightening"
+            },
+            {
+              "value": "curl",
+              "label": "卷发",
+              "labelEn": "Curling"
+            },
+            {
+              "value": "multi",
+              "label": "多功能造型",
+              "labelEn": "Multi-function styling"
+            }
+          ],
+          "requiredFor": [
+            "HS"
+          ]
+        },
+        {
+          "key": "heating_function",
+          "type": "select",
+          "label": "是否带电热元件",
+          "labelEn": "Does it include a heating element?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        }
+      ]
+    },
+    "garment_care": {
+      "label": "织物熨烫",
+      "labelEn": "Fabric pressing",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "fabric_pressing",
+          "type": "select",
+          "label": "是否通过热或蒸汽熨平织物",
+          "labelEn": "Does it smooth or press fabric using heat or steam?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "heated_soleplate",
+          "type": "select",
+          "label": "是否具有直接接触织物的加热底板",
+          "labelEn": "Does it have a heated soleplate that contacts fabric?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        },
+        {
+          "key": "handheld",
+          "type": "select",
+          "label": "主体在正常使用时是否手持",
+          "labelEn": "Is the main appliance hand-held in normal use?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "SG_CPSR",
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "separate_boiler_capacity_l",
+          "type": "number",
+          "label": "独立水箱／锅炉容量",
+          "labelEn": "Separate reservoir or boiler capacity",
+          "unit": "L",
+          "min": 0,
+          "step": 0.1,
+          "requiredFor": [
+            "SG_CPSR"
+          ]
+        }
+      ]
+    },
+    "air_treatment": {
+      "label": "空气处理",
+      "labelEn": "Air treatment",
+      "sourceIds": [
+        "SRC-164"
+      ],
+      "fields": [
+        {
+          "key": "air_treatment_function",
+          "type": "select",
+          "label": "主要空气处理功能",
+          "labelEn": "Primary air-treatment function",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "purify",
+              "label": "过滤／净化",
+              "labelEn": "Filtration or purification"
+            },
+            {
+              "value": "humidify",
+              "label": "加湿",
+              "labelEn": "Humidification"
+            },
+            {
+              "value": "dehumidify",
+              "label": "除湿",
+              "labelEn": "Dehumidification"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "water_reservoir",
+          "type": "select",
+          "label": "是否配有储水箱",
+          "labelEn": "Does it include a water reservoir?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "uv_ozone",
+          "type": "select",
+          "label": "是否使用紫外线、臭氧或离子发生装置",
+          "labelEn": "Does it use UV, ozone or ion generation?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "airflow_m3h",
+          "type": "number",
+          "label": "额定风量",
+          "labelEn": "Rated airflow",
+          "unit": "m³/h",
+          "min": 0,
+          "step": 1,
+          "requiredFor": []
+        }
+      ]
+    },
+    "room_heater": {
+      "label": "空间取暖",
+      "labelEn": "Room heating",
+      "sourceIds": [
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "comfort_heating",
+          "type": "select",
+          "label": "是否以室内舒适取暖为主要功能",
+          "labelEn": "Is room comfort heating the primary function?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": [
+            "AU_EESS"
+          ]
+        },
+        {
+          "key": "heater_type",
+          "type": "select",
+          "label": "取暖结构",
+          "labelEn": "Heater construction",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "fan",
+              "label": "暖风机",
+              "labelEn": "Fan heater"
+            },
+            {
+              "value": "radiant",
+              "label": "辐射式",
+              "labelEn": "Radiant heater"
+            },
+            {
+              "value": "oil",
+              "label": "充油式",
+              "labelEn": "Oil-filled heater"
+            },
+            {
+              "value": "storage",
+              "label": "蓄热式",
+              "labelEn": "Thermal-storage heater"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "portable",
+          "type": "select",
+          "label": "是否为便携式",
+          "labelEn": "Is it portable?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        }
+      ]
+    },
+    "personal_grooming": {
+      "label": "个人修剪",
+      "labelEn": "Personal grooming",
+      "sourceIds": [],
+      "fields": [
+        {
+          "key": "grooming_function",
+          "type": "select",
+          "label": "主要修剪功能",
+          "labelEn": "Primary grooming function",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "shave",
+              "label": "剃须",
+              "labelEn": "Shaving"
+            },
+            {
+              "value": "clip",
+              "label": "理发／修剪",
+              "labelEn": "Hair clipping or trimming"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "supply_mode",
+          "type": "select",
+          "label": "供电方式",
+          "labelEn": "Power supply",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "mains",
+              "label": "直接接入市电",
+              "labelEn": "Direct mains supply"
+            },
+            {
+              "value": "rechargeable",
+              "label": "充电电池",
+              "labelEn": "Rechargeable battery"
+            },
+            {
+              "value": "replaceable_battery",
+              "label": "可更换电池",
+              "labelEn": "Replaceable battery"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "wet_use",
+          "type": "select",
+          "label": "是否设计为湿用或可水洗",
+          "labelEn": "Is it designed for wet use or washing?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        }
+      ]
+    },
+    "floor_care": {
+      "label": "地面清洁",
+      "labelEn": "Floor care",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ],
+      "fields": [
+        {
+          "key": "floor_process",
+          "type": "select",
+          "label": "主要清洁方式",
+          "labelEn": "Primary floor-care method",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "wash",
+              "label": "洗地／吸水",
+              "labelEn": "Washing or water pickup"
+            },
+            {
+              "value": "steam",
+              "label": "蒸汽清洁",
+              "labelEn": "Steam cleaning"
+            },
+            {
+              "value": "polish",
+              "label": "抛光／刷洗",
+              "labelEn": "Polishing or scrubbing"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "suction_cleaning",
+          "type": "select",
+          "label": "是否同时通过吸力清除污物或水分",
+          "labelEn": "Does it also remove dirt or moisture by suction?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "portable",
+          "type": "select",
+          "label": "是否为可移动式完整设备",
+          "labelEn": "Is it a portable complete appliance?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        },
+        {
+          "key": "heating_function",
+          "type": "select",
+          "label": "是否具有加热或蒸汽发生功能",
+          "labelEn": "Does it heat or generate steam?",
+          "options": [
+            {
+              "value": "",
+              "label": "暂不清楚",
+              "labelEn": "Not confirmed"
+            },
+            {
+              "value": "true",
+              "label": "是",
+              "labelEn": "Yes"
+            },
+            {
+              "value": "false",
+              "label": "否",
+              "labelEn": "No"
+            }
+          ],
+          "requiredFor": []
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "value": "kettle",
+      "productId": "P-KET-01",
+      "group": "kitchen",
+      "label": "电热水壶",
+      "labelEn": "Electric kettle",
+      "templates": [
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "boil_water_only",
+          "label": "煮沸饮用水",
+          "labelEn": "Boil drinking water"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "便携式、容量不超过10L的液体加热器具；型号不是覆盖单位。",
+      "boundaryEn": "Portable liquid-heating appliances up to 10 L; coverage is not model-specific.",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "hot_water_dispenser",
+      "productId": "P-HWD-01",
+      "group": "kitchen",
+      "label": "冷热饮水机／热水分配器",
+      "labelEn": "Hot-water dispenser",
+      "templates": [
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "dispense_hot_water",
+          "label": "加热并分配热水",
+          "labelEn": "Heat and dispense hot water"
+        },
+        {
+          "value": "hot_cold_water",
+          "label": "冷热水组合",
+          "labelEn": "Hot and cold water"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "airpot",
+      "productId": "P-AIRP-01",
+      "group": "kitchen",
+      "label": "电热水瓶／电热水罐",
+      "labelEn": "Electric airpot",
+      "templates": [
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "boil_keep_warm",
+          "label": "煮沸并保温",
+          "labelEn": "Boil and keep warm"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "coffee_maker",
+      "productId": "P-CFM-01",
+      "group": "kitchen",
+      "label": "咖啡机",
+      "labelEn": "Coffee maker",
+      "templates": [
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "brew_coffee",
+          "label": "加热液体并制作咖啡",
+          "labelEn": "Heat liquid and brew coffee"
+        },
+        {
+          "value": "grind_brew",
+          "label": "研磨并制作咖啡",
+          "labelEn": "Grind and brew coffee"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "slow_cooker",
+      "productId": "P-SLC-01",
+      "group": "kitchen",
+      "label": "电炖锅／慢炖锅",
+      "labelEn": "Slow cooker",
+      "templates": [
+        "portable_cooking",
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "slow_cook",
+          "label": "低温慢炖",
+          "labelEn": "Slow cooking"
+        },
+        {
+          "value": "stew_keep_warm",
+          "label": "炖煮并保温",
+          "labelEn": "Stew and keep warm"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "pressure_cooker",
+      "productId": "P-PRC-01",
+      "group": "kitchen",
+      "label": "电压力锅",
+      "labelEn": "Electric pressure cooker",
+      "templates": [
+        "portable_cooking",
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "pressure_cook",
+          "label": "压力烹饪",
+          "labelEn": "Pressure cooking"
+        },
+        {
+          "value": "multi_cook",
+          "label": "多功能烹饪",
+          "labelEn": "Multi-function cooking"
+        }
+      ],
+      "tags": [
+        "pressure",
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "rice_cooker",
+      "productId": "P-RIC-01",
+      "group": "kitchen",
+      "label": "电饭煲",
+      "labelEn": "Rice cooker",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "cook_rice",
+          "label": "煮饭",
+          "labelEn": "Cook rice"
+        },
+        {
+          "value": "rice_multi_cook",
+          "label": "煮饭及其他烹饪",
+          "labelEn": "Rice and multi-function cooking"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "food_steamer",
+      "productId": "P-FST-01",
+      "group": "kitchen",
+      "label": "电蒸锅",
+      "labelEn": "Food steamer",
+      "templates": [
+        "portable_cooking",
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "steam_food",
+          "label": "蒸制食品",
+          "labelEn": "Steam food"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "soybean_milk_maker",
+      "productId": "P-SBM-01",
+      "group": "kitchen",
+      "label": "豆浆机",
+      "labelEn": "Soy milk maker",
+      "templates": [
+        "liquid_heating",
+        "kitchen_machine"
+      ],
+      "functions": [
+        {
+          "value": "grind_heat",
+          "label": "粉碎并加热饮品",
+          "labelEn": "Grind and heat beverages"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "toaster",
+      "productId": "P-TST-01",
+      "group": "kitchen",
+      "label": "面包烤片机",
+      "labelEn": "Bread toaster",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "toast_bread_only",
+          "label": "烘烤面包片或类似食品",
+          "labelEn": "Toast bread or similar foods"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "家用、便携式、以烤制面包片为主要功能。",
+      "boundaryEn": "Household portable appliance primarily for toasting bread.",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "air_fryer",
+      "productId": "P-AFR-01",
+      "group": "kitchen",
+      "label": "空气炸锅",
+      "labelEn": "Air fryer",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "air_fry",
+          "label": "循环热空气烹饪",
+          "labelEn": "Cook with circulating hot air"
+        },
+        {
+          "value": "air_fry_multi",
+          "label": "空气炸及多功能烹饪",
+          "labelEn": "Air-fry and multi-function cooking"
+        }
+      ],
+      "tags": [
+        "hot-air",
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "deep_fryer",
+      "productId": "P-DFR-01",
+      "group": "kitchen",
+      "label": "电炸锅",
+      "labelEn": "Electric deep fryer",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "deep_fry",
+          "label": "以食用油炸制食品",
+          "labelEn": "Deep-fry food in oil"
+        }
+      ],
+      "tags": [
+        "oil"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "electric_wok",
+      "productId": "P-WOK-01",
+      "group": "kitchen",
+      "label": "电炒锅",
+      "labelEn": "Electric wok",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "stir_fry",
+          "label": "煎炒烹饪",
+          "labelEn": "Stir-fry and cook"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "electric_grill",
+      "productId": "P-EGR-01",
+      "group": "kitchen",
+      "label": "电烤炉／电烤盘",
+      "labelEn": "Electric grill",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "grill_food",
+          "label": "烧烤食品",
+          "labelEn": "Grill food"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "hot_plate",
+      "productId": "P-HPL-01",
+      "group": "kitchen",
+      "label": "电热盘／便携式电炉",
+      "labelEn": "Hot plate",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "heat_cookware",
+          "label": "加热外部炊具",
+          "labelEn": "Heat external cookware"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "sandwich_maker",
+      "productId": "P-SWM-01",
+      "group": "kitchen",
+      "label": "三明治机",
+      "labelEn": "Sandwich maker",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "toast_sandwich",
+          "label": "压烤三明治",
+          "labelEn": "Toast pressed sandwiches"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "waffle_maker",
+      "productId": "P-WFM-01",
+      "group": "kitchen",
+      "label": "华夫饼机",
+      "labelEn": "Waffle maker",
+      "templates": [
+        "portable_cooking"
+      ],
+      "functions": [
+        {
+          "value": "bake_waffle",
+          "label": "烘烤华夫饼",
+          "labelEn": "Bake waffles"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "microwave",
+      "productId": "P-MWO-01",
+      "group": "kitchen",
+      "label": "微波炉",
+      "labelEn": "Microwave oven",
+      "templates": [
+        "microwave"
+      ],
+      "functions": [
+        {
+          "value": "microwave_food",
+          "label": "微波加热食品或饮料",
+          "labelEn": "Heat food or beverages by microwave"
+        },
+        {
+          "value": "microwave_grill",
+          "label": "微波与烧烤组合",
+          "labelEn": "Microwave and grill"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "blender",
+      "productId": "P-BLD-01",
+      "group": "kitchen",
+      "label": "搅拌机／料理机",
+      "labelEn": "Blender",
+      "templates": [
+        "kitchen_machine"
+      ],
+      "functions": [
+        {
+          "value": "blend_food",
+          "label": "搅拌食品或饮料",
+          "labelEn": "Blend food or beverages"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "food_processor",
+      "productId": "P-FPR-01",
+      "group": "kitchen",
+      "label": "食品加工机",
+      "labelEn": "Food processor",
+      "templates": [
+        "kitchen_machine"
+      ],
+      "functions": [
+        {
+          "value": "process_food",
+          "label": "切碎、切片或多功能处理",
+          "labelEn": "Chop, slice or process food"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "food_mixer",
+      "productId": "P-FMX-01",
+      "group": "kitchen",
+      "label": "食品搅拌机／厨师机",
+      "labelEn": "Food mixer",
+      "templates": [
+        "kitchen_machine"
+      ],
+      "functions": [
+        {
+          "value": "mix_knead",
+          "label": "混合、打发或揉面",
+          "labelEn": "Mix, whip or knead"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "juice_extractor",
+      "productId": "P-JEX-01",
+      "group": "kitchen",
+      "label": "榨汁机",
+      "labelEn": "Juice extractor",
+      "templates": [
+        "kitchen_machine"
+      ],
+      "functions": [
+        {
+          "value": "extract_juice",
+          "label": "从果蔬提取汁液",
+          "labelEn": "Extract juice from fruit or vegetables"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "vacuum",
+      "productId": "P-VAC-01",
+      "group": "cleaning",
+      "label": "家用吸尘器",
+      "labelEn": "Household vacuum cleaner",
+      "templates": [
+        "vacuum"
+      ],
+      "functions": [
+        {
+          "value": "vacuum_dry",
+          "label": "吸除尘土和污物",
+          "labelEn": "Remove dust and dirt by suction"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "wet_dry_vacuum",
+      "productId": "P-WDV-01",
+      "group": "cleaning",
+      "label": "干湿两用吸尘器",
+      "labelEn": "Wet and dry vacuum cleaner",
+      "templates": [
+        "vacuum"
+      ],
+      "functions": [
+        {
+          "value": "vacuum_wet_dry",
+          "label": "吸除尘土、污物或水分",
+          "labelEn": "Remove dust, dirt or moisture"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "robot_vacuum",
+      "productId": "P-RVC-01",
+      "group": "cleaning",
+      "label": "扫地／扫拖机器人",
+      "labelEn": "Robot vacuum or vacuum-mop robot",
+      "templates": [
+        "vacuum",
+        "robot_vacuum"
+      ],
+      "functions": [
+        {
+          "value": "robot_vacuum",
+          "label": "自主吸尘",
+          "labelEn": "Autonomous vacuuming"
+        },
+        {
+          "value": "robot_vacuum_mop",
+          "label": "自主吸尘与拖地",
+          "labelEn": "Autonomous vacuuming and mopping"
+        }
+      ],
+      "tags": [
+        "connected",
+        "battery",
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "floor_washer",
+      "productId": "P-FLW-01",
+      "group": "cleaning",
+      "label": "洗地机",
+      "labelEn": "Floor washer",
+      "templates": [
+        "floor_care"
+      ],
+      "functions": [
+        {
+          "value": "wash_floor",
+          "label": "洗地并回收污水",
+          "labelEn": "Wash floors and recover dirty water"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "steam_cleaner",
+      "productId": "P-STM-01",
+      "group": "cleaning",
+      "label": "蒸汽清洁机",
+      "labelEn": "Steam cleaner",
+      "templates": [
+        "floor_care"
+      ],
+      "functions": [
+        {
+          "value": "steam_clean",
+          "label": "以蒸汽清洁表面",
+          "labelEn": "Clean surfaces with steam"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "floor_polisher",
+      "productId": "P-FPL-01",
+      "group": "cleaning",
+      "label": "地板抛光／刷洗机",
+      "labelEn": "Floor polisher or scrubber",
+      "templates": [
+        "floor_care"
+      ],
+      "functions": [
+        {
+          "value": "polish_scrub",
+          "label": "抛光或刷洗地面",
+          "labelEn": "Polish or scrub floors"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "fan",
+      "productId": "P-FAN-01",
+      "group": "environment",
+      "label": "家用电风扇",
+      "labelEn": "Household electric fan",
+      "templates": [
+        "fan"
+      ],
+      "functions": [
+        {
+          "value": "circulate_air",
+          "label": "循环附近空气",
+          "labelEn": "Circulate nearby air"
+        },
+        {
+          "value": "extract_air",
+          "label": "抽排空气",
+          "labelEn": "Extract air"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "air_purifier",
+      "productId": "P-APR-01",
+      "group": "environment",
+      "label": "空气净化器",
+      "labelEn": "Air purifier",
+      "templates": [
+        "air_treatment"
+      ],
+      "functions": [
+        {
+          "value": "purify_air",
+          "label": "过滤或净化空气",
+          "labelEn": "Filter or purify air"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164"
+      ]
+    },
+    {
+      "value": "humidifier",
+      "productId": "P-HUM-01",
+      "group": "environment",
+      "label": "加湿器",
+      "labelEn": "Humidifier",
+      "templates": [
+        "air_treatment",
+        "liquid_heating"
+      ],
+      "functions": [
+        {
+          "value": "humidify_air",
+          "label": "提高室内空气湿度",
+          "labelEn": "Humidify room air"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "dehumidifier",
+      "productId": "P-DEH-01",
+      "group": "environment",
+      "label": "除湿机",
+      "labelEn": "Dehumidifier",
+      "templates": [
+        "air_treatment"
+      ],
+      "functions": [
+        {
+          "value": "dehumidify_air",
+          "label": "降低室内空气湿度",
+          "labelEn": "Dehumidify room air"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164"
+      ]
+    },
+    {
+      "value": "room_heater",
+      "productId": "P-RHT-01",
+      "group": "environment",
+      "label": "室内取暖器",
+      "labelEn": "Room heater",
+      "templates": [
+        "room_heater"
+      ],
+      "functions": [
+        {
+          "value": "heat_room",
+          "label": "室内舒适取暖",
+          "labelEn": "Heat a room for comfort"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "hair_dryer",
+      "productId": "P-HDR-01",
+      "group": "personal",
+      "label": "电吹风",
+      "labelEn": "Hair dryer",
+      "templates": [
+        "hair_care"
+      ],
+      "functions": [
+        {
+          "value": "dry_hair",
+          "label": "吹干人体头发",
+          "labelEn": "Dry human hair"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "hair_styler",
+      "productId": "P-HST-01",
+      "group": "personal",
+      "label": "卷发器／直发器／美发造型器",
+      "labelEn": "Hair curler, straightener or styler",
+      "templates": [
+        "hair_care"
+      ],
+      "functions": [
+        {
+          "value": "style_hair",
+          "label": "造型或护理人体头发",
+          "labelEn": "Style or care for human hair"
+        }
+      ],
+      "tags": [
+        "multi-function"
+      ],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "electric_shaver",
+      "productId": "P-SHV-01",
+      "group": "personal",
+      "label": "电动剃须刀",
+      "labelEn": "Electric shaver",
+      "templates": [
+        "personal_grooming"
+      ],
+      "functions": [
+        {
+          "value": "shave",
+          "label": "剃除面部或身体毛发",
+          "labelEn": "Shave facial or body hair"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": []
+    },
+    {
+      "value": "hair_clipper",
+      "productId": "P-CLP-01",
+      "group": "personal",
+      "label": "电推剪／理发器",
+      "labelEn": "Electric hair clipper",
+      "templates": [
+        "personal_grooming"
+      ],
+      "functions": [
+        {
+          "value": "clip_hair",
+          "label": "修剪人体毛发",
+          "labelEn": "Clip or trim human hair"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": []
+    },
+    {
+      "value": "iron",
+      "productId": "P-IRN-01",
+      "group": "garment",
+      "label": "电熨斗",
+      "labelEn": "Electric iron",
+      "templates": [
+        "garment_care"
+      ],
+      "functions": [
+        {
+          "value": "press_fabric",
+          "label": "以加热底板熨平织物",
+          "labelEn": "Press fabric with a heated soleplate"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    },
+    {
+      "value": "garment_steamer",
+      "productId": "P-GST-01",
+      "group": "garment",
+      "label": "挂烫机／织物蒸汽机",
+      "labelEn": "Garment or fabric steamer",
+      "templates": [
+        "garment_care"
+      ],
+      "functions": [
+        {
+          "value": "steam_fabric",
+          "label": "以蒸汽熨平织物",
+          "labelEn": "Smooth fabric with steam"
+        }
+      ],
+      "tags": [],
+      "multiFunctionAllowed": true,
+      "boundaryZh": "",
+      "boundaryEn": "",
+      "sourceIds": [
+        "SRC-164",
+        "SRC-206"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "MAT-071",
+      "名称": "产品用途、功能与结构边界说明",
+      "name_en": "Product use, function and construction statement",
+      "企业准备状态": "未提供",
+      "专业复核状态": "未复核"
+    },
+    {
+      "material_id": "MAT-072",
+      "名称": "铭牌、额定电压功率与供电方式证据",
+      "name_en": "Rating plate, voltage, power and supply evidence",
+      "企业准备状态": "未提供",
+      "专业复核状态": "未复核"
+    },
+    {
+      "material_id": "MAT-073",
+      "名称": "适用安全标准的型号测试报告及关键部件清单",
+      "name_en": "Model test report and critical-components list for the applicable safety standard",
+      "企业准备状态": "未提供",
+      "专业复核状态": "未复核"
+    },
+    {
+      "material_id": "MAT-074",
+      "名称": "当地责任主体、产品注册与标识记录",
+      "name_en": "Local responsible party, product registration and marking records",
+      "企业准备状态": "未提供",
+      "专业复核状态": "未复核"
+    },
+    {
+      "material_id": "MAT-075",
+      "名称": "组合功能、无线模块与基站配置说明",
+      "name_en": "Combined-function, radio module and dock configuration",
+      "企业准备状态": "未提供",
+      "专业复核状态": "未复核"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "ACT-SG-EXP-SCOPE",
+      "名称": "确认受控品定义和适用安全标准",
+      "name_en": "Confirm the controlled-goods definition and applicable safety standard",
+      "需执行动作": "依据产品主要功能、结构、容量、额定电压及组合功能确认具体受控类别和最低标准版本。",
+      "action_en": "Use the product function, construction, capacity, rated voltage and combined functions to confirm the controlled category and minimum standard edition.",
+      "材料ID": [
+        "MAT-071",
+        "MAT-072"
+      ],
+      "责任建议": "产品／质量与新加坡注册供应商",
+      "responsibility_en": "Product/quality team and Singapore Registered Supplier",
+      "完成节点": "送检或型号注册前",
+      "due_en": "Before testing or model registration",
+      "来源ID": [
+        "SRC-164"
+      ],
+      "条款定位": "CPSR Information Booklet 第4.1章及附录B",
+      "locator_en": "CPSR Information Booklet section 4.1 and Appendix B"
+    },
+    {
+      "action_id": "ACT-SG-EXP-REG",
+      "名称": "完成合格评定、型号注册和 SAFETY Mark",
+      "name_en": "Complete conformity assessment, model registration and SAFETY Mark",
+      "需执行动作": "由符合条件的当地注册供应商取得相应合格评定文件、登记型号并在供货前正确加施 SAFETY Mark。",
+      "action_en": "Have an eligible local Registered Supplier obtain the applicable conformity evidence, register the model and apply the SAFETY Mark before supply.",
+      "材料ID": [
+        "MAT-073",
+        "MAT-074"
+      ],
+      "责任建议": "质量／认证与新加坡注册供应商",
+      "responsibility_en": "Quality/certification and Singapore Registered Supplier",
+      "完成节点": "供货或发布供货广告前",
+      "due_en": "Before supply or advertising for supply",
+      "来源ID": [
+        "SRC-164",
+        "SRC-166"
+      ],
+      "条款定位": "CPSR Information Booklet 第5至6章",
+      "locator_en": "CPSR Information Booklet sections 5–6"
+    },
+    {
+      "action_id": "ACT-SG-NONCG-CHECK",
+      "名称": "记录非受控品判断并继续一般消费品安全核查",
+      "name_en": "Record the non-controlled-goods scope conclusion and continue general product-safety review",
+      "需执行动作": "本快照下未落入列明受控品不等于无需合规；保留定义比对，并继续核验一般消费品安全及其他主管机关要求。",
+      "action_en": "Not being listed as a controlled good does not remove all obligations. Keep the scope comparison and continue checks under general consumer-product safety and other regulators.",
+      "材料ID": [
+        "MAT-071",
+        "MAT-072"
+      ],
+      "责任建议": "产品／质量／当地法律顾问",
+      "responsibility_en": "Product, quality and local legal adviser",
+      "完成节点": "投放市场前",
+      "due_en": "Before market placement",
+      "来源ID": [
+        "SRC-164"
+      ],
+      "条款定位": "附录C非受控品示例及免责声明",
+      "locator_en": "Appendix C non-controlled examples and disclaimer"
+    },
+    {
+      "action_id": "ACT-AU-EXP-L3",
+      "名称": "按 EESS Level 3 准备证书与设备注册",
+      "name_en": "Prepare certification and equipment registration for EESS Level 3",
+      "需执行动作": "确认产品定义及电压边界，由澳新责任供应商准备有效合格证书并在 EESS 平台登记具体设备。",
+      "action_en": "Confirm the equipment definition and voltage scope, then have an Australian or New Zealand Responsible Supplier hold valid certification and register the equipment on the EESS platform.",
+      "材料ID": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "责任建议": "质量／澳新责任供应商",
+      "responsibility_en": "Quality team and Australian/New Zealand Responsible Supplier",
+      "完成节点": "供应前",
+      "due_en": "Before supply",
+      "来源ID": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "条款定位": "EESS definitions v4.3 对应设备定义；维州授权法规",
+      "locator_en": "Relevant equipment definition in EESS v4.3 and Victorian authorised regulations"
+    },
+    {
+      "action_id": "ACT-AU-EXP-RCM",
+      "名称": "完成责任供应商登记、RCM 与证据留存",
+      "name_en": "Complete Responsible Supplier registration, RCM and evidence retention",
+      "需执行动作": "核实责任供应商、设备级别、EESS 登记和 RCM 使用条件，并独立检查 EMC／无线义务。",
+      "action_en": "Verify the Responsible Supplier, equipment risk level, EESS registration and RCM conditions, and separately assess EMC/radio obligations.",
+      "材料ID": [
+        "MAT-074",
+        "MAT-075"
+      ],
+      "责任建议": "质量／法规与澳新责任供应商",
+      "responsibility_en": "Quality/regulatory team and Australian/New Zealand Responsible Supplier",
+      "完成节点": "供应前",
+      "due_en": "Before supply",
+      "来源ID": [
+        "SRC-183",
+        "SRC-184",
+        "SRC-187"
+      ],
+      "条款定位": "EESS 注册和标识指南；ACMA 适用性另核",
+      "locator_en": "EESS registration and marking guidance; ACMA scope checked separately"
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "SG-P2-LIQ",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "液体加热器具受控范围",
+      "name_en": "Controlled liquid-heating appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "hot_water_dispenser",
+              "airpot"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "heats_liquid",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "capacity_l",
+            "value": 10
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-15／-21／-35（按加热方式） 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-15／-21／-35（按加热方式）.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第14页，Liquid heating appliances",
+      "locator_en": "CPSR Information Booklet 第14页，Liquid heating appliances",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-BEV",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "咖啡机、慢炖锅、蒸锅及类似器具受控范围",
+      "name_en": "Controlled coffee makers, slow cookers, steamers and similar appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "coffee_maker",
+              "slow_cooker",
+              "pressure_cooker",
+              "food_steamer",
+              "soybean_milk_maker"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "any",
+            "args": [
+              {
+                "op": "eq",
+                "field": "heats_liquid",
+                "value": true,
+                "optional": false
+              },
+              {
+                "op": "eq",
+                "field": "cooks_or_warms_food",
+                "value": true,
+                "optional": false
+              }
+            ]
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-15:2012+A1:2016+A2:2018 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-15:2012+A1:2016+A2:2018.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第11页，Coffee maker, slow cooker, steamboat and similar appliances",
+      "locator_en": "CPSR Information Booklet 第11页，Coffee maker, slow cooker, steamboat and similar appliances",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-RICE",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "电饭煲受控范围",
+      "name_en": "Controlled rice cookers",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "rice_cooker"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "cooks_or_warms_food",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-15:2012+A1:2016+A2:2018 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-15:2012+A1:2016+A2:2018.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第15页，Rice cooker",
+      "locator_en": "CPSR Information Booklet 第15页，Rice cooker",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-COOK",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "烤炉、炸锅、热盘及类似器具受控范围",
+      "name_en": "Controlled grills, fryers, hot plates and similar appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "air_fryer",
+              "deep_fryer",
+              "electric_wok",
+              "electric_grill",
+              "hot_plate",
+              "sandwich_maker",
+              "waffle_maker"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "cooks_or_warms_food",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-9／-13／-78（按结构） 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-9／-13／-78（按结构）.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第16页及附录B，Toaster, grill, roaster, hot plate, deep fryer, wok and similar appliances",
+      "locator_en": "CPSR Information Booklet 第16页及附录B，Toaster, grill, roaster, hot plate, deep fryer, wok and similar appliances",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-KITCHEN",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "厨房机械受控范围",
+      "name_en": "Controlled kitchen machines",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "blender",
+              "food_processor",
+              "food_mixer",
+              "juice_extractor"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "mechanical_food_prep",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-14:2016+A1:2019 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-14:2016+A1:2019.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第13页，Kitchen machines",
+      "locator_en": "CPSR Information Booklet 第13页，Kitchen machines",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-FAN",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "家用电风扇受控范围",
+      "name_en": "Controlled household fans",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "fan"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "moves_air",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 SS 655:2020／IEC 60335-2-80:2015 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under SS 655:2020／IEC 60335-2-80:2015.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第12页，Fan",
+      "locator_en": "CPSR Information Booklet 第12页，Fan",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-MWO",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "微波炉受控范围",
+      "name_en": "Controlled microwave ovens",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "microwave"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "microwave_heating",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-25:2020 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-25:2020.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第14页，Microwave oven",
+      "locator_en": "CPSR Information Booklet 第14页，Microwave oven",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-VAC",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "便携式家用吸尘器受控范围",
+      "name_en": "Controlled portable household vacuum cleaners",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "vacuum",
+              "wet_dry_vacuum"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "suction_cleaning",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "portable",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-2:2019 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-2:2019.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第16页，Vacuum cleaner",
+      "locator_en": "CPSR Information Booklet 第16页，Vacuum cleaner",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-HAIR",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "手持式头发护理器具受控范围",
+      "name_en": "Controlled hand-held hair-care appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "hair_styler"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          },
+          {
+            "op": "eq",
+            "field": "hair_care",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "handheld",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 IEC 60335-2-23:2016+A1:2019 对应路线确认测试、合格评定、型号注册和标识。",
+      "obligation_en": "Confirm testing, conformity assessment, model registration and marking under IEC 60335-2-23:2016+A1:2019.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "CPSR Information Booklet 第13页，Hair care appliances",
+      "locator_en": "CPSR Information Booklet 第13页，Hair care appliances",
+      "requirement_type": "法律义务（官方程序指南支撑）",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "组合功能、具体型号、标准版次和测试报告范围需由 CAB／专业人员复核。",
+      "human_review_en": "A CAB or qualified professional must review combined functions, the specific model, standard edition and test-report scope.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-ROBOT-DOCK",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "扫地机器人集尘基站的吸尘器受控边界",
+      "name_en": "Controlled-goods boundary for robot-vacuum dust-extraction docks",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "product_type",
+            "value": "robot_vacuum",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "mains_dock",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "dock_dust_removal",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 250
+          }
+        ]
+      },
+      "obligation": "带有抽取尘土功能的机器人基站按吸尘器受控范围核验；仅充电基站或仅电池主机不能据此自动认定。",
+      "obligation_en": "A robot dock that removes dust is checked within the controlled vacuum-cleaner scope. A charging-only dock or battery-only robot is not automatically covered by this conclusion.",
+      "action_ids": [
+        "ACT-SG-EXP-SCOPE",
+        "ACT-SG-EXP-REG"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "附录B第54页；Docking station of robot vacuum cleaners with the function to remove dirt or dust",
+      "locator_en": "Appendix B, page 54: robot-vacuum dock with dirt/dust removal",
+      "requirement_type": "官方范围说明",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "需分开识别机器人主机、充电基站和自动集尘基站。",
+      "human_review_en": "The robot, charging dock and auto-empty dock must be identified separately.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "SG-P2-GARMENT-NONCG",
+      "market": "SG",
+      "regulation_id": "REG-SG-001",
+      "topic_id": "T02",
+      "name": "挂烫机在当前受控品清单中的范围提示",
+      "name_en": "Current controlled-goods scope note for garment steamers",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "SG",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "product_type",
+            "value": "garment_steamer",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "fabric_pressing",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "heated_soleplate",
+            "value": false,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "CPSR 2026-06-24 手册附录C将 cloth steamer 列为非受控品示例；仍须继续核验一般消费品安全及其他适用要求。",
+      "obligation_en": "Appendix C of the 24 June 2026 CPSR booklet lists cloth steamers as a non-controlled example. General consumer-product safety and other applicable obligations still require review.",
+      "action_ids": [
+        "ACT-SG-NONCG-CHECK"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072"
+      ],
+      "source_ids": [
+        "SRC-164"
+      ],
+      "locator": "附录C第55页，Cloth steamer",
+      "locator_en": "Appendix C, page 55: Cloth steamer",
+      "requirement_type": "官方范围说明",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "若产品具有加热底板或组合功能，应重新评估是否落入 Iron 等受控定义。",
+      "human_review_en": "If the product has a heated soleplate or combined functions, reassess whether it falls within Iron or another controlled definition.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-LIQ",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "液体加热器具 EESS Level 3",
+      "name_en": "EESS Level 3 liquid-heating appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "hot_water_dispenser",
+              "airpot",
+              "coffee_maker"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "heats_liquid",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "portable",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "le",
+            "field": "capacity_l",
+            "value": 10
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.15／.21／.35／.98 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.15／.21／.35／.98, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第18页，Liquid heating appliance",
+      "locator_en": "EESS definitions v4.3 第18页，Liquid heating appliance",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-COOK",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "便携式烹饪器具 EESS Level 3",
+      "name_en": "EESS Level 3 portable cooking appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "slow_cooker",
+              "pressure_cooker",
+              "rice_cooker",
+              "food_steamer",
+              "soybean_milk_maker",
+              "air_fryer",
+              "deep_fryer",
+              "electric_wok",
+              "electric_grill",
+              "hot_plate",
+              "sandwich_maker",
+              "waffle_maker"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "cooks_or_warms_food",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "portable",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.9／.12／.13／.78（按结构） 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.9／.12／.13／.78（按结构）, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第9页，Cooking appliance—portable type",
+      "locator_en": "EESS definitions v4.3 第9页，Cooking appliance—portable type",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-KITCHEN",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "厨房机械 EESS Level 3",
+      "name_en": "EESS Level 3 kitchen machines",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "blender",
+              "food_processor",
+              "food_mixer",
+              "juice_extractor"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "mechanical_food_prep",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.14 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.14, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第16页，Kitchen machine",
+      "locator_en": "EESS definitions v4.3 第16页，Kitchen machine",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-FAN",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "电风扇 EESS Level 3",
+      "name_en": "EESS Level 3 fans",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "fan"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "moves_air",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.80 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.80, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第13页，Fan",
+      "locator_en": "EESS definitions v4.3 第13页，Fan",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-MWO",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "微波炉 EESS Level 3",
+      "name_en": "EESS Level 3 microwave ovens",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "microwave"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "microwave_heating",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.25 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.25, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第19页，Microwave oven",
+      "locator_en": "EESS definitions v4.3 第19页，Microwave oven",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-VAC",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "吸尘器 EESS Level 3",
+      "name_en": "EESS Level 3 vacuum cleaners",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "vacuum",
+              "wet_dry_vacuum",
+              "robot_vacuum"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "suction_cleaning",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "portable",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.2 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.2, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第30页，Vacuum cleaner",
+      "locator_en": "EESS definitions v4.3 第30页，Vacuum cleaner",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-HAIR",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "头发护理器具 EESS Level 3",
+      "name_en": "EESS Level 3 hair-care appliances",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "hair_styler"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "hair_care",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.23 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.23, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第15页，Hair care appliance",
+      "locator_en": "EESS definitions v4.3 第15页，Hair care appliance",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-GARMENT",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "织物蒸汽机 EESS Level 3",
+      "name_en": "EESS Level 3 fabric steamers",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "garment_steamer"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "fabric_pressing",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "handheld",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.85 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.85, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第16页，Iron（Fabric steamer class specification）",
+      "locator_en": "EESS definitions v4.3 第16页，Iron（Fabric steamer class specification）",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    },
+    {
+      "rule_id": "AU-P2-HEATER",
+      "market": "AU",
+      "regulation_id": "REG-AU-001",
+      "topic_id": "T02",
+      "name": "室内取暖器 EESS Level 3",
+      "name_en": "EESS Level 3 room heaters",
+      "condition": {
+        "op": "all",
+        "args": [
+          {
+            "op": "eq",
+            "field": "market",
+            "value": "AU",
+            "optional": false
+          },
+          {
+            "op": "eq",
+            "field": "sales_state",
+            "value": "VIC",
+            "optional": false
+          },
+          {
+            "op": "in",
+            "field": "product_type",
+            "value": [
+              "room_heater"
+            ]
+          },
+          {
+            "op": "eq",
+            "field": "household",
+            "value": true,
+            "optional": false
+          },
+          {
+            "op": "gt",
+            "field": "voltage_ac",
+            "value": 50
+          },
+          {
+            "op": "le",
+            "field": "voltage_ac",
+            "value": 1000
+          },
+          {
+            "op": "eq",
+            "field": "comfort_heating",
+            "value": true,
+            "optional": false
+          }
+        ]
+      },
+      "obligation": "按 AS/NZS 60335.2.30／.61 对应的 Level 3 路径准备证书、责任供应商登记和设备注册。",
+      "obligation_en": "Follow the Level 3 route under AS/NZS 60335.2.30／.61, including certification, Responsible Supplier registration and equipment registration.",
+      "action_ids": [
+        "ACT-AU-EXP-L3",
+        "ACT-AU-EXP-RCM"
+      ],
+      "material_ids": [
+        "MAT-071",
+        "MAT-072",
+        "MAT-073",
+        "MAT-074",
+        "MAT-075"
+      ],
+      "source_ids": [
+        "SRC-206",
+        "SRC-219"
+      ],
+      "locator": "EESS definitions v4.3 第25页，Room heater",
+      "locator_en": "EESS definitions v4.3 第25页，Room heater",
+      "requirement_type": "州法义务及被引用标准",
+      "rule_status": "active",
+      "applicable_as_of": "2026-11-04",
+      "human_review": "具体产品定义、标准版次、证书范围及其他州适用性需专业复核。",
+      "human_review_en": "A qualified reviewer must confirm the exact equipment definition, standard edition, certificate scope and application in other states.",
+      "priority": "P0"
+    }
+  ],
+  "hsCandidates": [
+    {
+      "candidate_id": "HS-SG-P2-HOT-WATER-DISPENSER",
+      "market": "SG",
+      "product_id": "P-HWD-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "电热式热水分配器候选方向；具体结构和8位码待复核",
+      "support_en": "电热式热水分配器候选方向；具体结构和8位码待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-HOT-WATER-DISPENSER",
+      "market": "AU",
+      "product_id": "P-HWD-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "电热式热水分配器候选方向；具体结构和8位码待复核",
+      "support_en": "电热式热水分配器候选方向；具体结构和8位码待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-AIRPOT",
+      "market": "SG",
+      "product_id": "P-AIRP-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "电热水瓶／水罐候选方向；具体结构和8位码待复核",
+      "support_en": "电热水瓶／水罐候选方向；具体结构和8位码待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-AIRPOT",
+      "market": "AU",
+      "product_id": "P-AIRP-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "电热水瓶／水罐候选方向；具体结构和8位码待复核",
+      "support_en": "电热水瓶／水罐候选方向；具体结构和8位码待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-COFFEE-MAKER",
+      "market": "SG",
+      "product_id": "P-CFM-01",
+      "code": "851671",
+      "description": "Coffee or tea makers",
+      "description_en": "Coffee or tea makers",
+      "support": "完整电热式咖啡或茶饮制作器具",
+      "support_en": "完整电热式咖啡或茶饮制作器具",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-COFFEE-MAKER",
+      "market": "AU",
+      "product_id": "P-CFM-01",
+      "code": "851671",
+      "description": "Coffee or tea makers",
+      "description_en": "Coffee or tea makers",
+      "support": "完整电热式咖啡或茶饮制作器具",
+      "support_en": "完整电热式咖啡或茶饮制作器具",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-SLOW-COOKER",
+      "market": "SG",
+      "product_id": "P-SLC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "以电热烹饪食品的慢炖器具候选方向",
+      "support_en": "以电热烹饪食品的慢炖器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-SLOW-COOKER",
+      "market": "AU",
+      "product_id": "P-SLC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "以电热烹饪食品的慢炖器具候选方向",
+      "support_en": "以电热烹饪食品的慢炖器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-PRESSURE-COOKER",
+      "market": "SG",
+      "product_id": "P-PRC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "电热式压力烹饪器具候选方向",
+      "support_en": "电热式压力烹饪器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-PRESSURE-COOKER",
+      "market": "AU",
+      "product_id": "P-PRC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "电热式压力烹饪器具候选方向",
+      "support_en": "电热式压力烹饪器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-RICE-COOKER",
+      "market": "SG",
+      "product_id": "P-RIC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式电饭煲候选方向",
+      "support_en": "家用电热式电饭煲候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-RICE-COOKER",
+      "market": "AU",
+      "product_id": "P-RIC-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式电饭煲候选方向",
+      "support_en": "家用电热式电饭煲候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-FOOD-STEAMER",
+      "market": "SG",
+      "product_id": "P-FST-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式食品蒸制器具候选方向",
+      "support_en": "家用电热式食品蒸制器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-FOOD-STEAMER",
+      "market": "AU",
+      "product_id": "P-FST-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式食品蒸制器具候选方向",
+      "support_en": "家用电热式食品蒸制器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-SOYBEAN-MILK-MAKER",
+      "market": "SG",
+      "product_id": "P-SBM-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "同时粉碎和加热时需按主要功能及组合机规则复核",
+      "support_en": "同时粉碎和加热时需按主要功能及组合机规则复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-SOYBEAN-MILK-MAKER",
+      "market": "AU",
+      "product_id": "P-SBM-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "同时粉碎和加热时需按主要功能及组合机规则复核",
+      "support_en": "同时粉碎和加热时需按主要功能及组合机规则复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-AIR-FRYER",
+      "market": "SG",
+      "product_id": "P-AFR-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "以循环热空气烹饪食品的完整器具",
+      "support_en": "以循环热空气烹饪食品的完整器具",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-AIR-FRYER",
+      "market": "AU",
+      "product_id": "P-AFR-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "以循环热空气烹饪食品的完整器具",
+      "support_en": "以循环热空气烹饪食品的完整器具",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-DEEP-FRYER",
+      "market": "SG",
+      "product_id": "P-DFR-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "以食用油炸制食品的家用电热器具候选方向",
+      "support_en": "以食用油炸制食品的家用电热器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-DEEP-FRYER",
+      "market": "AU",
+      "product_id": "P-DFR-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "以食用油炸制食品的家用电热器具候选方向",
+      "support_en": "以食用油炸制食品的家用电热器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-ELECTRIC-WOK",
+      "market": "SG",
+      "product_id": "P-WOK-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式锅具候选方向",
+      "support_en": "家用电热式锅具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-ELECTRIC-WOK",
+      "market": "AU",
+      "product_id": "P-WOK-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热式锅具候选方向",
+      "support_en": "家用电热式锅具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-ELECTRIC-GRILL",
+      "market": "SG",
+      "product_id": "P-EGR-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电烤炉／烤盘候选方向",
+      "support_en": "家用电烤炉／烤盘候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-ELECTRIC-GRILL",
+      "market": "AU",
+      "product_id": "P-EGR-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电烤炉／烤盘候选方向",
+      "support_en": "家用电烤炉／烤盘候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-HOT-PLATE",
+      "market": "SG",
+      "product_id": "P-HPL-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热盘或电炉候选方向",
+      "support_en": "家用电热盘或电炉候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-HOT-PLATE",
+      "market": "AU",
+      "product_id": "P-HPL-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用电热盘或电炉候选方向",
+      "support_en": "家用电热盘或电炉候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-SANDWICH-MAKER",
+      "market": "SG",
+      "product_id": "P-SWM-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用压烤食品器具候选方向",
+      "support_en": "家用压烤食品器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-SANDWICH-MAKER",
+      "market": "AU",
+      "product_id": "P-SWM-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用压烤食品器具候选方向",
+      "support_en": "家用压烤食品器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-WAFFLE-MAKER",
+      "market": "SG",
+      "product_id": "P-WFM-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用华夫饼烘烤器具候选方向",
+      "support_en": "家用华夫饼烘烤器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-WAFFLE-MAKER",
+      "market": "AU",
+      "product_id": "P-WFM-01",
+      "code": "851660",
+      "description": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "description_en": "Other ovens; cookers, cooking plates, grillers and roasters",
+      "support": "家用华夫饼烘烤器具候选方向",
+      "support_en": "家用华夫饼烘烤器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-MICROWAVE",
+      "market": "SG",
+      "product_id": "P-MWO-01",
+      "code": "851650",
+      "description": "Microwave ovens",
+      "description_en": "Microwave ovens",
+      "support": "以高频电磁波在腔体内加热食品的完整设备",
+      "support_en": "以高频电磁波在腔体内加热食品的完整设备",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-MICROWAVE",
+      "market": "AU",
+      "product_id": "P-MWO-01",
+      "code": "851650",
+      "description": "Microwave ovens",
+      "description_en": "Microwave ovens",
+      "support": "以高频电磁波在腔体内加热食品的完整设备",
+      "support_en": "以高频电磁波在腔体内加热食品的完整设备",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-BLENDER",
+      "market": "SG",
+      "product_id": "P-BLD-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用食品搅拌或混合器具候选方向",
+      "support_en": "家用食品搅拌或混合器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-BLENDER",
+      "market": "AU",
+      "product_id": "P-BLD-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用食品搅拌或混合器具候选方向",
+      "support_en": "家用食品搅拌或混合器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-FOOD-PROCESSOR",
+      "market": "SG",
+      "product_id": "P-FPR-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用机械式食品加工器具候选方向",
+      "support_en": "家用机械式食品加工器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-FOOD-PROCESSOR",
+      "market": "AU",
+      "product_id": "P-FPR-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用机械式食品加工器具候选方向",
+      "support_en": "家用机械式食品加工器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-FOOD-MIXER",
+      "market": "SG",
+      "product_id": "P-FMX-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用食品搅拌、打发或揉面器具候选方向",
+      "support_en": "家用食品搅拌、打发或揉面器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-FOOD-MIXER",
+      "market": "AU",
+      "product_id": "P-FMX-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用食品搅拌、打发或揉面器具候选方向",
+      "support_en": "家用食品搅拌、打发或揉面器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-JUICE-EXTRACTOR",
+      "market": "SG",
+      "product_id": "P-JEX-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用果蔬榨汁器具候选方向",
+      "support_en": "家用果蔬榨汁器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-JUICE-EXTRACTOR",
+      "market": "AU",
+      "product_id": "P-JEX-01",
+      "code": "850940",
+      "description": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "description_en": "Food grinders and mixers; fruit or vegetable juice extractors",
+      "support": "家用果蔬榨汁器具候选方向",
+      "support_en": "家用果蔬榨汁器具候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-VACUUM",
+      "market": "SG",
+      "product_id": "P-VAC-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "按电机功率是否不超过1500W及集尘容器是否不超过20L区分子目",
+      "support_en": "按电机功率是否不超过1500W及集尘容器是否不超过20L区分子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-VACUUM",
+      "market": "AU",
+      "product_id": "P-VAC-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "按电机功率是否不超过1500W及集尘容器是否不超过20L区分子目",
+      "support_en": "按电机功率是否不超过1500W及集尘容器是否不超过20L区分子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-WET-DRY-VACUUM",
+      "market": "SG",
+      "product_id": "P-WDV-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "按电机功率和集尘容器容量区分；湿式功能不单独决定子目",
+      "support_en": "按电机功率和集尘容器容量区分；湿式功能不单独决定子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-WET-DRY-VACUUM",
+      "market": "AU",
+      "product_id": "P-WDV-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "按电机功率和集尘容器容量区分；湿式功能不单独决定子目",
+      "support_en": "按电机功率和集尘容器容量区分；湿式功能不单独决定子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-ROBOT-VACUUM",
+      "market": "SG",
+      "product_id": "P-RVC-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "完整扫地机器人以吸尘为主要功能时的候选方向；组合拖地功能待复核",
+      "support_en": "完整扫地机器人以吸尘为主要功能时的候选方向；组合拖地功能待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-ROBOT-VACUUM",
+      "market": "AU",
+      "product_id": "P-RVC-01",
+      "code": "850811/850819",
+      "description": "Vacuum cleaners with self-contained electric motor",
+      "description_en": "Vacuum cleaners with self-contained electric motor",
+      "support": "完整扫地机器人以吸尘为主要功能时的候选方向；组合拖地功能待复核",
+      "support_en": "完整扫地机器人以吸尘为主要功能时的候选方向；组合拖地功能待复核",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-FAN",
+      "market": "SG",
+      "product_id": "P-FAN-01",
+      "code": "841451/841459",
+      "description": "Fans",
+      "description_en": "Fans",
+      "support": "按是否为自含电动机且输出功率不超过125W区分候选子目",
+      "support_en": "按是否为自含电动机且输出功率不超过125W区分候选子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-FAN",
+      "market": "AU",
+      "product_id": "P-FAN-01",
+      "code": "841451/841459",
+      "description": "Fans",
+      "description_en": "Fans",
+      "support": "按是否为自含电动机且输出功率不超过125W区分候选子目",
+      "support_en": "按是否为自含电动机且输出功率不超过125W区分候选子目",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-239"
+      ],
+      "locator": "ABF Current Tariff Chapter 84；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-HAIR-STYLER",
+      "market": "SG",
+      "product_id": "P-HST-01",
+      "code": "851632",
+      "description": "Other hair-dressing apparatus",
+      "description_en": "Other hair-dressing apparatus",
+      "support": "卷发器、直发器或美发造型器候选方向",
+      "support_en": "卷发器、直发器或美发造型器候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-HAIR-STYLER",
+      "market": "AU",
+      "product_id": "P-HST-01",
+      "code": "851632",
+      "description": "Other hair-dressing apparatus",
+      "description_en": "Other hair-dressing apparatus",
+      "support": "卷发器、直发器或美发造型器候选方向",
+      "support_en": "卷发器、直发器或美发造型器候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-GARMENT-STEAMER",
+      "market": "SG",
+      "product_id": "P-GST-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "不带加热底板的织物蒸汽机候选方向",
+      "support_en": "不带加热底板的织物蒸汽机候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-GARMENT-STEAMER",
+      "market": "AU",
+      "product_id": "P-GST-01",
+      "code": "851679",
+      "description": "Other electro-thermic appliances",
+      "description_en": "Other electro-thermic appliances",
+      "support": "不带加热底板的织物蒸汽机候选方向",
+      "support_en": "不带加热底板的织物蒸汽机候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-SG-P2-ROOM-HEATER",
+      "market": "SG",
+      "product_id": "P-RHT-01",
+      "code": "851629",
+      "description": "Other electric space-heating apparatus",
+      "description_en": "Other electric space-heating apparatus",
+      "support": "非储热式家用电空间取暖器候选方向",
+      "support_en": "非储热式家用电空间取暖器候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-168"
+      ],
+      "locator": "STCCED/AHTN 2022 对应税目；8位码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "SG STCCED/AHTN 2022 portal snapshot",
+      "not_final_classification": true
+    },
+    {
+      "candidate_id": "HS-AU-P2-ROOM-HEATER",
+      "market": "AU",
+      "product_id": "P-RHT-01",
+      "code": "851629",
+      "description": "Other electric space-heating apparatus",
+      "description_en": "Other electric space-heating apparatus",
+      "support": "非储热式家用电空间取暖器候选方向",
+      "support_en": "非储热式家用电空间取暖器候选方向",
+      "distinguishing_questions": "主要功能、完整设备状态、额定功率／容量及组合功能是否与候选税目一致？",
+      "distinguishing_questions_en": "Do the primary function, complete-unit status, rated power/capacity and combined functions align with the candidate heading?",
+      "source_ids": [
+        "SRC-177"
+      ],
+      "locator": "ABF Current Tariff Chapter 85；统计码待复核",
+      "gri": "GIR 1、3（组合功能时）与6",
+      "review_status": "候选方向；最终目的国编码和个案事实待专业复核",
+      "review_status_en": "Candidate direction only; final destination-country classification and product facts require professional review.",
+      "effective_as_of": "2026-11-04",
+      "tariff_version": "AU current tariff portal snapshot",
+      "not_final_classification": true
+    }
+  ],
+  "coverageProfiles": [
+    {
+      "market": "SG",
+      "product_type": "hot_water_dispenser",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-HWD-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "hot_water_dispenser",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-HWD-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "airpot",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-AIRP-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "airpot",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-AIRP-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "coffee_maker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-CFM-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "coffee_maker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-CFM-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "slow_cooker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-SLC-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "slow_cooker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-SLC-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "pressure_cooker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-PRC-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "pressure_cooker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-PRC-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "food_steamer",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-FST-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "food_steamer",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-FST-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "soybean_milk_maker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-SBM-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "soybean_milk_maker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-SBM-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "rice_cooker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-RIC-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "rice_cooker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-RIC-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "air_fryer",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-AFR-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "air_fryer",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-AFR-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "deep_fryer",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-DFR-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "deep_fryer",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-DFR-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "electric_wok",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-WOK-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "electric_wok",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-WOK-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "electric_grill",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-EGR-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "electric_grill",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-EGR-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "hot_plate",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-HPL-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "hot_plate",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-HPL-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "sandwich_maker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-SWM-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "sandwich_maker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-SWM-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "waffle_maker",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-WFM-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "waffle_maker",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-WFM-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "blender",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-BLD-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "blender",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-BLD-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "food_processor",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-FPR-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "food_processor",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-FPR-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "food_mixer",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-FMX-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "food_mixer",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-FMX-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "juice_extractor",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-JEX-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "juice_extractor",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-JEX-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "fan",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-FAN-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "fan",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-FAN-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "microwave",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-MWO-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "microwave",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-MWO-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "vacuum",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-VAC-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "vacuum",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-VAC-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "wet_dry_vacuum",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-WDV-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "wet_dry_vacuum",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-WDV-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "hair_styler",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-HST-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "hair_styler",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-HST-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "robot_vacuum",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-RVC-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "robot_vacuum",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-RVC-01"
+    },
+    {
+      "market": "SG",
+      "product_type": "garment_steamer",
+      "level": "L2",
+      "label": "产品特征初筛",
+      "labelEn": "Product-feature screening",
+      "product_id": "P-GST-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "garment_steamer",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-GST-01"
+    },
+    {
+      "market": "AU",
+      "product_type": "room_heater",
+      "level": "L2",
+      "label": "EESS 条件初筛",
+      "labelEn": "EESS conditional screening",
+      "product_id": "P-RHT-01"
+    }
+  ],
+  "sourceRecords": [
+    {
+      "source_id": "SRC-239",
+      "market": "AU",
+      "title": "Australian Border Force Current Tariff Chapter 84",
+      "url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/tariff-classification/current-tariff/schedule-3/section-xvi/chapter-84",
+      "acquisition_status": "official_web_verified",
+      "pdf_kind": "官方网页；未生成本地PDF",
+      "verification": "官方现行税则网页",
+      "version": "2026-11-04访问",
+      "source_file_present": false
+    },
+    {
+      "source_id": "SRC-240",
+      "market": "GLOBAL",
+      "title": "Philips Airfryer product specifications",
+      "url": "https://www.usa.philips.com/etc/philips/b2c/compareproducts.html?catalog=CONSUMER&ctn=HD9630%2F28%2CHD9650%2F96&locale=en_US",
+      "acquisition_status": "official_web_verified",
+      "pdf_kind": "制造商官方产品规格网页",
+      "verification": "用于字段体系交叉验证；不是法规依据",
+      "version": "2026-11-04访问",
+      "source_file_present": false
+    },
+    {
+      "source_id": "SRC-241",
+      "market": "GLOBAL",
+      "title": "iRobot robot navigation and dock functions",
+      "url": "https://homesupport.irobot.com/articles/en_US/Knowledge/31056",
+      "acquisition_status": "official_web_verified",
+      "pdf_kind": "制造商官方支持网页",
+      "verification": "用于机器人功能字段交叉验证；不是法规依据",
+      "version": "2026-11-04访问",
+      "source_file_present": false
+    }
+  ]
+}
