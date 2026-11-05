@@ -1,0 +1,1743 @@
+{
+    "schemaVersion":  "1.0",
+    "generatedAt":  "2026-11-04",
+    "standard":  "ISO 3166-1 alpha-2 compatible country/territory codes; regional jurisdictions are explicit extensions",
+    "items":  [
+                  {
+                      "value":  "EU",
+                      "label":  "European Union",
+                      "englishName":  "European Union",
+                      "hasRegulationData":  true,
+                      "kind":  "regional_jurisdiction"
+                  },
+                  {
+                      "value":  "GCC",
+                      "label":  "Gulf Cooperation Council",
+                      "englishName":  "Gulf Cooperation Council",
+                      "hasRegulationData":  true,
+                      "kind":  "regional_jurisdiction"
+                  },
+                  {
+                      "value":  "EAEU",
+                      "label":  "Eurasian Economic Union",
+                      "englishName":  "Eurasian Economic Union",
+                      "hasRegulationData":  true,
+                      "kind":  "regional_jurisdiction"
+                  },
+                  {
+                      "value":  "RCEP",
+                      "label":  "RCEP",
+                      "englishName":  "RCEP",
+                      "hasRegulationData":  true,
+                      "kind":  "regional_jurisdiction"
+                  },
+                  {
+                      "value":  "AD",
+                      "label":  "安道尔",
+                      "englishName":  "Andorra",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AE",
+                      "label":  "阿拉伯联合酋长国",
+                      "englishName":  "United Arab Emirates",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AF",
+                      "label":  "阿富汗",
+                      "englishName":  "Afghanistan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AG",
+                      "label":  "安提瓜和巴布达",
+                      "englishName":  "Antigua \u0026 Barbuda",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AI",
+                      "label":  "安圭拉",
+                      "englishName":  "Anguilla",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AL",
+                      "label":  "阿尔巴尼亚",
+                      "englishName":  "Albania",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AM",
+                      "label":  "亚美尼亚",
+                      "englishName":  "Armenia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AO",
+                      "label":  "安哥拉",
+                      "englishName":  "Angola",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AR",
+                      "label":  "阿根廷",
+                      "englishName":  "Argentina",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AS",
+                      "label":  "美属萨摩亚",
+                      "englishName":  "American Samoa",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AT",
+                      "label":  "奥地利",
+                      "englishName":  "Austria",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AU",
+                      "label":  "澳大利亚",
+                      "englishName":  "Australia",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AW",
+                      "label":  "阿鲁巴",
+                      "englishName":  "Aruba",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AX",
+                      "label":  "奥兰群岛",
+                      "englishName":  "Åland Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "AZ",
+                      "label":  "阿塞拜疆",
+                      "englishName":  "Azerbaijan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BA",
+                      "label":  "波斯尼亚和黑塞哥维那",
+                      "englishName":  "Bosnia \u0026 Herzegovina",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BB",
+                      "label":  "巴巴多斯",
+                      "englishName":  "Barbados",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BD",
+                      "label":  "孟加拉国",
+                      "englishName":  "Bangladesh",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BE",
+                      "label":  "比利时",
+                      "englishName":  "Belgium",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BF",
+                      "label":  "布基纳法索",
+                      "englishName":  "Burkina Faso",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BG",
+                      "label":  "保加利亚",
+                      "englishName":  "Bulgaria",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BH",
+                      "label":  "巴林",
+                      "englishName":  "Bahrain",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BI",
+                      "label":  "布隆迪",
+                      "englishName":  "Burundi",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BJ",
+                      "label":  "贝宁",
+                      "englishName":  "Benin",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BL",
+                      "label":  "圣巴泰勒米",
+                      "englishName":  "St. Barthélemy",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BM",
+                      "label":  "百慕大",
+                      "englishName":  "Bermuda",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BN",
+                      "label":  "文莱达鲁萨兰",
+                      "englishName":  "Brunei",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BO",
+                      "label":  "玻利维亚",
+                      "englishName":  "Bolivia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BQ",
+                      "label":  "博内尔、圣尤斯特歇斯和沙巴",
+                      "englishName":  "Bonaire, Sint Eustatius and Saba",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BR",
+                      "label":  "巴西",
+                      "englishName":  "Brazil",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BS",
+                      "label":  "巴哈马",
+                      "englishName":  "Bahamas",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BT",
+                      "label":  "不丹",
+                      "englishName":  "Bhutan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BW",
+                      "label":  "博茨瓦纳",
+                      "englishName":  "Botswana",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BY",
+                      "label":  "白俄罗斯",
+                      "englishName":  "Belarus",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "BZ",
+                      "label":  "伯利兹",
+                      "englishName":  "Belize",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CA",
+                      "label":  "加拿大",
+                      "englishName":  "Canada",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CC",
+                      "label":  "科科斯(基林)群岛",
+                      "englishName":  "Cocos (Keeling) Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CD",
+                      "label":  "刚果民主共和国(DRC)",
+                      "englishName":  "Congo (DRC)",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CF",
+                      "label":  "中非共和国",
+                      "englishName":  "Central African Republic",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CG",
+                      "label":  "刚果",
+                      "englishName":  "Congo",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CH",
+                      "label":  "瑞士",
+                      "englishName":  "Switzerland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CI",
+                      "label":  "科特迪瓦",
+                      "englishName":  "Côte d’Ivoire",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CK",
+                      "label":  "库克群岛",
+                      "englishName":  "Cook Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CL",
+                      "label":  "智利",
+                      "englishName":  "Chile",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CM",
+                      "label":  "喀麦隆",
+                      "englishName":  "Cameroon",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CN",
+                      "label":  "中华人民共和国",
+                      "englishName":  "China",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CO",
+                      "label":  "哥伦比亚",
+                      "englishName":  "Colombia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CR",
+                      "label":  "哥斯达黎加",
+                      "englishName":  "Costa Rica",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CU",
+                      "label":  "古巴",
+                      "englishName":  "Cuba",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CV",
+                      "label":  "佛得角",
+                      "englishName":  "Cabo Verde",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CW",
+                      "label":  "库拉索",
+                      "englishName":  "Curaçao",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CX",
+                      "label":  "圣诞岛",
+                      "englishName":  "Christmas Island",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CY",
+                      "label":  "塞浦路斯",
+                      "englishName":  "Cyprus",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "CZ",
+                      "label":  "捷克共和国",
+                      "englishName":  "Czechia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DE",
+                      "label":  "德国",
+                      "englishName":  "Germany",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DJ",
+                      "label":  "吉布提",
+                      "englishName":  "Djibouti",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DK",
+                      "label":  "丹麦",
+                      "englishName":  "Denmark",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DM",
+                      "label":  "多米尼克",
+                      "englishName":  "Dominica",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DO",
+                      "label":  "多米尼加共和国",
+                      "englishName":  "Dominican Republic",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "DZ",
+                      "label":  "阿尔及利亚",
+                      "englishName":  "Algeria",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "EC",
+                      "label":  "厄瓜多尔",
+                      "englishName":  "Ecuador",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "EE",
+                      "label":  "爱沙尼亚",
+                      "englishName":  "Estonia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "EG",
+                      "label":  "埃及",
+                      "englishName":  "Egypt",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ER",
+                      "label":  "厄立特里亚",
+                      "englishName":  "Eritrea",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ES",
+                      "label":  "西班牙",
+                      "englishName":  "Spain",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ET",
+                      "label":  "埃塞俄比亚",
+                      "englishName":  "Ethiopia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FI",
+                      "label":  "芬兰",
+                      "englishName":  "Finland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FJ",
+                      "label":  "斐济",
+                      "englishName":  "Fiji",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FK",
+                      "label":  "福克兰群岛",
+                      "englishName":  "Falkland Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FM",
+                      "label":  "密克罗尼西亚",
+                      "englishName":  "Micronesia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FO",
+                      "label":  "法罗群岛",
+                      "englishName":  "Faroe Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "FR",
+                      "label":  "法国",
+                      "englishName":  "France",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GA",
+                      "label":  "加蓬",
+                      "englishName":  "Gabon",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GB",
+                      "label":  "英国",
+                      "englishName":  "United Kingdom",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GD",
+                      "label":  "格林纳达",
+                      "englishName":  "Grenada",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GE",
+                      "label":  "格鲁吉亚",
+                      "englishName":  "Georgia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GF",
+                      "label":  "法属圭亚那",
+                      "englishName":  "French Guiana",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GG",
+                      "label":  "格恩西岛",
+                      "englishName":  "Guernsey",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GH",
+                      "label":  "加纳",
+                      "englishName":  "Ghana",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GI",
+                      "label":  "直布罗陀",
+                      "englishName":  "Gibraltar",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GL",
+                      "label":  "格陵兰",
+                      "englishName":  "Greenland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GM",
+                      "label":  "冈比亚",
+                      "englishName":  "Gambia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GN",
+                      "label":  "几内亚",
+                      "englishName":  "Guinea",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GP",
+                      "label":  "瓜德罗普",
+                      "englishName":  "Guadeloupe",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GQ",
+                      "label":  "赤道几内亚",
+                      "englishName":  "Equatorial Guinea",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GR",
+                      "label":  "希腊",
+                      "englishName":  "Greece",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GT",
+                      "label":  "危地马拉",
+                      "englishName":  "Guatemala",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GU",
+                      "label":  "关岛",
+                      "englishName":  "Guam",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GW",
+                      "label":  "几内亚比绍",
+                      "englishName":  "Guinea-Bissau",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "GY",
+                      "label":  "圭亚那",
+                      "englishName":  "Guyana",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "HK",
+                      "label":  "中国香港特别行政区",
+                      "englishName":  "Hong Kong SAR",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "HN",
+                      "label":  "洪都拉斯",
+                      "englishName":  "Honduras",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "HR",
+                      "label":  "克罗地亚",
+                      "englishName":  "Croatia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "HT",
+                      "label":  "海地",
+                      "englishName":  "Haiti",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "HU",
+                      "label":  "匈牙利",
+                      "englishName":  "Hungary",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ID",
+                      "label":  "印度尼西亚",
+                      "englishName":  "Indonesia",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IE",
+                      "label":  "爱尔兰",
+                      "englishName":  "Ireland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IL",
+                      "label":  "以色列",
+                      "englishName":  "Israel",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IM",
+                      "label":  "马恩岛",
+                      "englishName":  "Isle of Man",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IN",
+                      "label":  "印度",
+                      "englishName":  "India",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IO",
+                      "label":  "英属印度洋领地",
+                      "englishName":  "British Indian Ocean Territory",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IQ",
+                      "label":  "伊拉克",
+                      "englishName":  "Iraq",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IR",
+                      "label":  "伊朗",
+                      "englishName":  "Iran",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IS",
+                      "label":  "冰岛",
+                      "englishName":  "Iceland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "IT",
+                      "label":  "意大利",
+                      "englishName":  "Italy",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "JE",
+                      "label":  "泽西岛",
+                      "englishName":  "Jersey",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "JM",
+                      "label":  "牙买加",
+                      "englishName":  "Jamaica",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "JO",
+                      "label":  "约旦",
+                      "englishName":  "Jordan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "JP",
+                      "label":  "日本",
+                      "englishName":  "Japan",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KE",
+                      "label":  "肯尼亚",
+                      "englishName":  "Kenya",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KG",
+                      "label":  "吉尔吉斯斯坦",
+                      "englishName":  "Kyrgyzstan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KH",
+                      "label":  "柬埔寨",
+                      "englishName":  "Cambodia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KI",
+                      "label":  "基里巴斯",
+                      "englishName":  "Kiribati",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KM",
+                      "label":  "科摩罗",
+                      "englishName":  "Comoros",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KN",
+                      "label":  "圣基茨和尼维斯",
+                      "englishName":  "St. Kitts \u0026 Nevis",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KP",
+                      "label":  "조선민주주의인민공화국",
+                      "englishName":  "North Korea",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KR",
+                      "label":  "韩国",
+                      "englishName":  "Korea",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KW",
+                      "label":  "科威特",
+                      "englishName":  "Kuwait",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KY",
+                      "label":  "开曼群岛",
+                      "englishName":  "Cayman Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "KZ",
+                      "label":  "哈萨克斯坦",
+                      "englishName":  "Kazakhstan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LA",
+                      "label":  "老挝人民民主共和国",
+                      "englishName":  "Laos",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LB",
+                      "label":  "黎巴嫩",
+                      "englishName":  "Lebanon",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LC",
+                      "label":  "圣卢西亚",
+                      "englishName":  "St. Lucia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LI",
+                      "label":  "列支敦士登",
+                      "englishName":  "Liechtenstein",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LK",
+                      "label":  "斯里兰卡",
+                      "englishName":  "Sri Lanka",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LR",
+                      "label":  "利比里亚",
+                      "englishName":  "Liberia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LS",
+                      "label":  "莱索托",
+                      "englishName":  "Lesotho",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LT",
+                      "label":  "立陶宛",
+                      "englishName":  "Lithuania",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LU",
+                      "label":  "卢森堡",
+                      "englishName":  "Luxembourg",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LV",
+                      "label":  "拉脱维亚",
+                      "englishName":  "Latvia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "LY",
+                      "label":  "利比亚",
+                      "englishName":  "Libya",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MA",
+                      "label":  "摩洛哥",
+                      "englishName":  "Morocco",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MC",
+                      "label":  "摩纳哥公国",
+                      "englishName":  "Monaco",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MD",
+                      "label":  "摩尔多瓦",
+                      "englishName":  "Moldova",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ME",
+                      "label":  "黑山共和国",
+                      "englishName":  "Montenegro",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MF",
+                      "label":  "法属圣马丁",
+                      "englishName":  "St. Martin",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MG",
+                      "label":  "马达加斯加",
+                      "englishName":  "Madagascar",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MH",
+                      "label":  "马绍尔群岛",
+                      "englishName":  "Marshall Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MK",
+                      "label":  "北马其顿",
+                      "englishName":  "North Macedonia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ML",
+                      "label":  "马里",
+                      "englishName":  "Mali",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MM",
+                      "label":  "缅甸",
+                      "englishName":  "Myanmar",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MN",
+                      "label":  "蒙古",
+                      "englishName":  "Mongolia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MO",
+                      "label":  "中国澳门特别行政区",
+                      "englishName":  "Macao SAR",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MP",
+                      "label":  "北马里亚纳群岛",
+                      "englishName":  "Northern Mariana Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MQ",
+                      "label":  "马提尼克",
+                      "englishName":  "Martinique",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MR",
+                      "label":  "毛里塔尼亚",
+                      "englishName":  "Mauritania",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MS",
+                      "label":  "蒙特塞拉特",
+                      "englishName":  "Montserrat",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MT",
+                      "label":  "马耳他",
+                      "englishName":  "Malta",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MU",
+                      "label":  "毛里求斯",
+                      "englishName":  "Mauritius",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MV",
+                      "label":  "马尔代夫",
+                      "englishName":  "Maldives",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MW",
+                      "label":  "马拉维",
+                      "englishName":  "Malawi",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MX",
+                      "label":  "墨西哥",
+                      "englishName":  "Mexico",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MY",
+                      "label":  "马来西亚",
+                      "englishName":  "Malaysia",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "MZ",
+                      "label":  "莫桑比克",
+                      "englishName":  "Mozambique",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NA",
+                      "label":  "纳米比亚",
+                      "englishName":  "Namibia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NC",
+                      "label":  "新喀里多尼亚",
+                      "englishName":  "New Caledonia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NE",
+                      "label":  "尼日尔",
+                      "englishName":  "Niger",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NF",
+                      "label":  "诺福克岛",
+                      "englishName":  "Norfolk Island",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NG",
+                      "label":  "尼日利亚",
+                      "englishName":  "Nigeria",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NI",
+                      "label":  "尼加拉瓜",
+                      "englishName":  "Nicaragua",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NL",
+                      "label":  "荷兰",
+                      "englishName":  "Netherlands",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NO",
+                      "label":  "挪威",
+                      "englishName":  "Norway",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NP",
+                      "label":  "尼泊尔",
+                      "englishName":  "Nepal",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NR",
+                      "label":  "瑙鲁",
+                      "englishName":  "Nauru",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NU",
+                      "label":  "纽埃",
+                      "englishName":  "Niue",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "NZ",
+                      "label":  "新西兰",
+                      "englishName":  "New Zealand",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "OM",
+                      "label":  "阿曼",
+                      "englishName":  "Oman",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PA",
+                      "label":  "巴拿马",
+                      "englishName":  "Panama",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PE",
+                      "label":  "秘鲁",
+                      "englishName":  "Peru",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PF",
+                      "label":  "法属玻里尼西亚",
+                      "englishName":  "French Polynesia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PG",
+                      "label":  "巴布亚新几内亚",
+                      "englishName":  "Papua New Guinea",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PH",
+                      "label":  "菲律宾",
+                      "englishName":  "Philippines",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PK",
+                      "label":  "巴基斯坦伊斯兰共和国",
+                      "englishName":  "Pakistan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PL",
+                      "label":  "波兰",
+                      "englishName":  "Poland",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PM",
+                      "label":  "圣皮埃尔和密克隆群岛",
+                      "englishName":  "St. Pierre \u0026 Miquelon",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PN",
+                      "label":  "皮特凯恩群岛",
+                      "englishName":  "Pitcairn Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PR",
+                      "label":  "波多黎各",
+                      "englishName":  "Puerto Rico",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PS",
+                      "label":  "巴勒斯坦民族权力机构",
+                      "englishName":  "Palestinian Authority",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PT",
+                      "label":  "葡萄牙",
+                      "englishName":  "Portugal",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PW",
+                      "label":  "帕劳",
+                      "englishName":  "Palau",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "PY",
+                      "label":  "巴拉圭",
+                      "englishName":  "Paraguay",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "QA",
+                      "label":  "卡塔尔",
+                      "englishName":  "Qatar",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "RE",
+                      "label":  "留尼汪",
+                      "englishName":  "Réunion",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "RO",
+                      "label":  "罗马尼亚",
+                      "englishName":  "Romania",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "RS",
+                      "label":  "塞尔维亚",
+                      "englishName":  "Serbia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "RU",
+                      "label":  "俄罗斯",
+                      "englishName":  "Russia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "RW",
+                      "label":  "卢旺达",
+                      "englishName":  "Rwanda",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SA",
+                      "label":  "沙特阿拉伯",
+                      "englishName":  "Saudi Arabia",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SB",
+                      "label":  "所罗门群岛",
+                      "englishName":  "Solomon Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SC",
+                      "label":  "塞舌尔",
+                      "englishName":  "Seychelles",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SD",
+                      "label":  "苏丹",
+                      "englishName":  "Sudan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SE",
+                      "label":  "瑞典",
+                      "englishName":  "Sweden",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SG",
+                      "label":  "新加坡",
+                      "englishName":  "Singapore",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SH",
+                      "label":  "圣赫勒拿-阿森松-特里斯坦达库尼亚",
+                      "englishName":  "St Helena, Ascension, Tristan da Cunha",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SI",
+                      "label":  "斯洛文尼亚",
+                      "englishName":  "Slovenia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SJ",
+                      "label":  "斯瓦尔巴和扬马延",
+                      "englishName":  "Svalbard \u0026 Jan Mayen",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SK",
+                      "label":  "斯洛伐克",
+                      "englishName":  "Slovakia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SL",
+                      "label":  "塞拉利昂",
+                      "englishName":  "Sierra Leone",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SM",
+                      "label":  "圣马力诺",
+                      "englishName":  "San Marino",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SN",
+                      "label":  "塞内加尔",
+                      "englishName":  "Senegal",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SO",
+                      "label":  "索马里",
+                      "englishName":  "Somalia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SR",
+                      "label":  "苏里南",
+                      "englishName":  "Suriname",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SS",
+                      "label":  "南苏丹",
+                      "englishName":  "South Sudan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ST",
+                      "label":  "圣多美和普林西比",
+                      "englishName":  "São Tomé \u0026 Príncipe",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SV",
+                      "label":  "萨尔瓦多",
+                      "englishName":  "El Salvador",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SX",
+                      "label":  "圣马丁",
+                      "englishName":  "Sint Maarten",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SY",
+                      "label":  "叙利亚",
+                      "englishName":  "Syria",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "SZ",
+                      "label":  "斯威士兰",
+                      "englishName":  "Eswatini",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TC",
+                      "label":  "特克斯和凯科斯群岛",
+                      "englishName":  "Turks \u0026 Caicos Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TD",
+                      "label":  "乍得",
+                      "englishName":  "Chad",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TG",
+                      "label":  "多哥",
+                      "englishName":  "Togo",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TH",
+                      "label":  "泰国",
+                      "englishName":  "Thailand",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TJ",
+                      "label":  "塔吉克斯坦",
+                      "englishName":  "Tajikistan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TK",
+                      "label":  "托克劳",
+                      "englishName":  "Tokelau",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TL",
+                      "label":  "东帝汶",
+                      "englishName":  "Timor-Leste",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TM",
+                      "label":  "土库曼斯坦",
+                      "englishName":  "Turkmenistan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TN",
+                      "label":  "突尼斯",
+                      "englishName":  "Tunisia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TO",
+                      "label":  "汤加",
+                      "englishName":  "Tonga",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TR",
+                      "label":  "土耳其",
+                      "englishName":  "Türkiye",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TT",
+                      "label":  "特立尼达和多巴哥",
+                      "englishName":  "Trinidad \u0026 Tobago",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TV",
+                      "label":  "图瓦卢",
+                      "englishName":  "Tuvalu",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TW",
+                      "label":  "中国台湾",
+                      "englishName":  "Taiwan",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "TZ",
+                      "label":  "坦桑尼亚",
+                      "englishName":  "Tanzania",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "UA",
+                      "label":  "乌克兰",
+                      "englishName":  "Ukraine",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "UG",
+                      "label":  "乌干达",
+                      "englishName":  "Uganda",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "UM",
+                      "label":  "美国本土外小岛屿",
+                      "englishName":  "U.S. Outlying Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "US",
+                      "label":  "美国",
+                      "englishName":  "United States",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "UY",
+                      "label":  "乌拉圭",
+                      "englishName":  "Uruguay",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "UZ",
+                      "label":  "乌兹别克斯坦",
+                      "englishName":  "Uzbekistan",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VA",
+                      "label":  "Civitas Vaticana",
+                      "englishName":  "Vatican City",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VC",
+                      "label":  "圣文森特和格林纳丁斯",
+                      "englishName":  "St. Vincent \u0026 Grenadines",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VE",
+                      "label":  "委内瑞拉玻利瓦尔共和国",
+                      "englishName":  "Venezuela",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VG",
+                      "label":  "英属维尔京群岛",
+                      "englishName":  "British Virgin Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VI",
+                      "label":  "美属维尔京群岛",
+                      "englishName":  "U.S. Virgin Islands",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VN",
+                      "label":  "越南",
+                      "englishName":  "Vietnam",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "VU",
+                      "label":  "瓦努阿图",
+                      "englishName":  "Vanuatu",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "WF",
+                      "label":  "瓦利斯群岛和富图纳群岛",
+                      "englishName":  "Wallis \u0026 Futuna",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "WS",
+                      "label":  "萨摩亚",
+                      "englishName":  "Samoa",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "XK",
+                      "label":  "科索沃",
+                      "englishName":  "Kosovo",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "YE",
+                      "label":  "也门",
+                      "englishName":  "Yemen",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "YT",
+                      "label":  "马约特",
+                      "englishName":  "Mayotte",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ZA",
+                      "label":  "南非",
+                      "englishName":  "South Africa",
+                      "hasRegulationData":  true,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ZM",
+                      "label":  "赞比亚",
+                      "englishName":  "Zambia",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  },
+                  {
+                      "value":  "ZW",
+                      "label":  "津巴布韦",
+                      "englishName":  "Zimbabwe",
+                      "hasRegulationData":  false,
+                      "kind":  "country_or_territory"
+                  }
+              ]
+}
