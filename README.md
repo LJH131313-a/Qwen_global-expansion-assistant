@@ -25,7 +25,7 @@
 3. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**。本项目不使用 “Deploy from a branch”。
 4. **Settings → Actions → General → Workflow permissions** 允许工作流读写仓库。如果组织政策或受保护分支禁止机器人提交，需要由管理员允许，或改为人工提交快照。
 5. 在 **Actions → Refresh news and publish Pages → Run workflow** 运行一次，等待 Deploy 步骤成功。发布链接在 Pages 设置和工作流页面。
-6. 后续提交会发布现有快照；定时任务和手动 Run workflow 会先采集再发布。默认北京时间每天约 09:17、17:17。GitHub 调度可能延迟，不能作为分钟级实时服务。
+6. 后续提交、定时任务和手动 Run workflow 都会先采集再发布。默认北京时间每天约 09:17、17:17。采集机器人保存快照不会递归触发新工作流；GitHub 调度可能延迟，不能作为分钟级实时服务。
 
 上传到 GitHub 后无需在云端运行 build.py，`dist` 已经是构建好的完整静态网站。工作流会直接发布 `dist`，所以项目子路径也能正常加载。
 
