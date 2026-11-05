@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-11-04T12:50:23.473Z",
+  "files": {
+    "product_knowledge_bundle.json": {
+      "source": "..\\product-sourcing-database\\data\\product_knowledge_bundle.json",
+      "bytes": 736618
+    },
+    "product_validation_report.json": {
+      "source": "..\\product-sourcing-database\\tests\\validation_report.json",
+      "bytes": 3549
+    },
+    "regulatory_web_bundle.json": {
+      "source": "..\\regulatory-sourcing-database\\data\\web_bundle.json",
+      "bytes": 1092406
+    },
+    "regulatory_validation_report.json": {
+      "source": "..\\regulatory-sourcing-database\\tests\\validation_report.json",
+      "bytes": 4287
+    },
+    "hs_tax_audit.json": {
+      "source": "..\\regulatory-sourcing-database\\data\\hs_tax_audit.json",
+      "bytes": 2748
+    },
+    "id_mapping.json": {
+      "source": "generated from synchronized artifacts",
+      "bytes": 14788
+    }
+  }
+}
