@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-06T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Canada invests $3.5M to help MQM Quality Manufacturing respond to tariffs",
+      "summary": "Canada invests $3.5M to help MQM Quality Manufacturing respond to tariffs",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/11/canada-invests-35m-to-help-mqm-quality-manufacturing-respond-to-tariffs.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "产品准入与安全",
+      "level": "中",
+      "date": "2026-11-06T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Roberts Bank Terminal 2 listed as a project of national interest to strengthen Canada's trade sovereignty",
+      "summary": "The world is increasingly more uncertain. Geopolitical tension is reshaping trade, supply chains are under pressure, and there is an increased global competition for capital, and market access.",
+      "impact": "加拿大关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/transport-canada/news/2026/10/roberts-bank-terminal-2-listed-as-a-project-of-national-interest-to-strengthen-canadas-trade-sovereignty.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "产品准入与安全",
+      "level": "中",
+      "date": "2026-11-06T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Minister Sidhu announces extension of favourable market access for Canadian canola meal, peas, lobsters and crab through 2028",
+      "summary": "Today, the Honourable Maninder Sidhu, Minister of International Trade, announced that Canada and China have agreed to a two-year extension until the end of 2028 of the favourable market access provided under the Preliminary Joint Arrangement for Canadian canola meal, peas, lobsters and crab.",
+      "impact": "加拿大关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/11/minister-sidhu-announces-extension-of-favourable-market-access-for-canadian-canola-meal-peas-lobsters-and-crab-through-2028.html",
+      "verified": "待核验"
+    },
+    {
       "market": "美国",
       "category": "市场风向与行业热点",
       "level": "中",
@@ -76,45 +115,6 @@
       "impact": "美国关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
       "products": "小家电与跨境经营政策",
       "url": "https://www.federalregister.gov/documents/2026/11/05/2026-22585/approval-and-promulgation-of-state-plans-for-designated-facilities-and-pollutants-arizona-control-of",
-      "verified": "待核验"
-    },
-    {
-      "market": "加拿大",
-      "category": "贸易与海关",
-      "level": "中",
-      "date": "2026-11-05T00:00:00",
-      "source": "加拿大政府新闻 API（官方 Atom）",
-      "title": "Canada invests $3.5M to help MQM Quality Manufacturing respond to tariffs",
-      "summary": "Canada invests $3.5M to help MQM Quality Manufacturing respond to tariffs",
-      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
-      "products": "小家电与跨境经营政策",
-      "url": "https://www.canada.ca/en/atlantic-canada-opportunities/news/2026/11/canada-invests-35m-to-help-mqm-quality-manufacturing-respond-to-tariffs.html",
-      "verified": "待核验"
-    },
-    {
-      "market": "加拿大",
-      "category": "产品准入与安全",
-      "level": "中",
-      "date": "2026-11-05T00:00:00",
-      "source": "加拿大政府新闻 API（官方 Atom）",
-      "title": "Roberts Bank Terminal 2 listed as a project of national interest to strengthen Canada's trade sovereignty",
-      "summary": "The world is increasingly more uncertain. Geopolitical tension is reshaping trade, supply chains are under pressure, and there is an increased global competition for capital, and market access.",
-      "impact": "加拿大关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
-      "products": "小家电与跨境经营政策",
-      "url": "https://www.canada.ca/en/transport-canada/news/2026/10/roberts-bank-terminal-2-listed-as-a-project-of-national-interest-to-strengthen-canadas-trade-sovereignty.html",
-      "verified": "待核验"
-    },
-    {
-      "market": "加拿大",
-      "category": "产品准入与安全",
-      "level": "中",
-      "date": "2026-11-05T00:00:00",
-      "source": "加拿大政府新闻 API（官方 Atom）",
-      "title": "Minister Sidhu announces extension of favourable market access for Canadian canola meal, peas, lobsters and crab through 2028",
-      "summary": "Today, the Honourable Maninder Sidhu, Minister of International Trade, announced that Canada and China have agreed to a two-year extension until the end of 2028 of the favourable market access provided under the Preliminary Joint Arrangement for Canadian canola meal, peas, lobsters and crab.",
-      "impact": "加拿大关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
-      "products": "小家电与跨境经营政策",
-      "url": "https://www.canada.ca/en/global-affairs/news/2026/11/minister-sidhu-announces-extension-of-favourable-market-access-for-canadian-canola-meal-peas-lobsters-and-crab-through-2028.html",
       "verified": "待核验"
     },
     {
@@ -574,12 +574,12 @@
     }
   ],
   "count": 44,
-  "exported_at": "2026-11-05T17:27:57.163341+00:00",
+  "exported_at": "2026-11-06T07:58:35.488910+00:00",
   "collection": {
-    "attempted_at": "2026-11-05T17:27:57.163341+00:00",
+    "attempted_at": "2026-11-06T07:58:35.488910+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 6,
+    "new_items": 0,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
