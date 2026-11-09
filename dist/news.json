@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "market": "欧盟",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-09T13:35:40",
+      "source": "欧盟委员会 Press Corner（官方 RSS，英文）",
+      "title": "Remarks by Commissioner Dombrovskis at the ECOFIN press conference",
+      "summary": "European Commission Statement Brussels, 09 Nov 2026 Let me begin with some positive news.\nThe Council has reached an agreement on the VAT proposal.\nThis is an important step in supporting the agreed Customs Refor...",
+      "impact": "欧盟关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2382",
+      "verified": "待核验"
+    },
+    {
       "market": "美国",
       "category": "产品准入与安全",
       "level": "中",
@@ -664,13 +677,13 @@
       "verified": "待核验"
     }
   ],
-  "count": 51,
-  "exported_at": "2026-11-09T08:04:22.267009+00:00",
+  "count": 52,
+  "exported_at": "2026-11-09T19:54:10.246708+00:00",
   "collection": {
-    "attempted_at": "2026-11-09T08:04:22.267009+00:00",
+    "attempted_at": "2026-11-09T19:54:10.246708+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 0,
+    "new_items": 1,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
