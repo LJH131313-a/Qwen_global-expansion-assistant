@@ -56,7 +56,7 @@
       "market": "加拿大",
       "category": "贸易与海关",
       "level": "中",
-      "date": "2026-11-11T00:00:00",
+      "date": "2026-11-12T00:00:00",
       "source": "加拿大政府新闻 API（官方 Atom）",
       "title": "Canada modifies tariff relief measures to better support workers and businesses",
       "summary": "Today, the Honourable François-Philippe Champagne, Minister of Finance and National Revenue, announced changes to Canada’s tariff relief measures to better support Canadian businesses and workers affected by U.S. tariffs, while encouraging the use of Canadian-made goods wherever possible.",
@@ -808,12 +808,12 @@
     }
   ],
   "count": 62,
-  "exported_at": "2026-11-11T17:14:47.178360+00:00",
+  "exported_at": "2026-11-12T08:24:57.186894+00:00",
   "collection": {
-    "attempted_at": "2026-11-11T17:14:47.178360+00:00",
+    "attempted_at": "2026-11-12T08:24:57.186894+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 6,
+    "new_items": 0,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
