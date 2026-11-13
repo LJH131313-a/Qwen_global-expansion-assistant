@@ -1,6 +1,32 @@
 {
   "items": [
     {
+      "market": "美国",
+      "category": "产品准入与安全",
+      "level": "中",
+      "date": "2026-11-13T05:00:00",
+      "source": "美国 Federal Register（官方 RSS）",
+      "title": "Federal Consistency Appeal by DCOR, LLC",
+      "summary": "This announcement provides notice that the Department of Commerce has received a &quot;Notice of Appeal&quot; filed by Appellant DCOR, L.L.C (DCOR). DCOR is requesting that the Secretary of Commerce (Secretary) override an objection by the California Coastal Commission to a consistency certification for a proposed supplement to DCOR&#39;s Development and Production Plan for Platform Gilda, which would authorize hydraulic fracturing well stimulation techniques.",
+      "impact": "美国关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23135/federal-consistency-appeal-by-dcor-llc",
+      "verified": "待核验"
+    },
+    {
+      "market": "美国",
+      "category": "产品准入与安全",
+      "level": "中",
+      "date": "2026-11-13T05:00:00",
+      "source": "美国 Federal Register（官方 RSS）",
+      "title": "Agency Information Collection Activities: Requests for Comments; Clearance of Renewed Approval of Information Collection: Noise Certification Standards for Subsonic Jet Airplanes and Subsonic Transport Category Large Airplanes",
+      "summary": "In accordance with the Paperwork Reduction Act of 1995, FAA invites public comments about our intention to request the Office of Management and Budget (OMB) approval to renew an information collection. The collection involves the noise certification regulations of 14 CFR part 36 for aircraft. This includes information collection requirements for the noise certification of subsonic aircraft-jet airplanes and subsonic transport category large airplanes, small propeller driven airplanes and rotorcraft. The information collected are the results of noise certification tests that demonstrate compliance with 14 CFR part 36. The original information collection was implemented to show compliance in accordance with the Aircraft Noise Abatement Act of 1968; that statute is now part of the overall cod",
+      "impact": "美国关注建议：核对涉及产品是否落入当地强制认证/测试范围，检查证书持有人、测试标准及生效日期；出货前确认型号和技术文件。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.federalregister.gov/documents/2026/11/13/2026-23111/agency-information-collection-activities-requests-for-comments-clearance-of-renewed-approval-of",
+      "verified": "待核验"
+    },
+    {
       "market": "加拿大",
       "category": "贸易与海关",
       "level": "中",
@@ -11,6 +37,32 @@
       "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
       "products": "小家电与跨境经营政策",
       "url": "https://www.canada.ca/en/global-affairs/news/2026/11/parliamentary-secretary-naqvi-to-highlight-measures-to-protect-workers-from-tariffs-and-strengthen-ontarios-industries.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-13T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Backgrounder: Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/backgrounder-minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-c.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-13T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-calgary-area-b.html",
       "verified": "待核验"
     },
     {
@@ -833,13 +885,13 @@
       "verified": "待核验"
     }
   ],
-  "count": 64,
-  "exported_at": "2026-11-13T08:06:16.285844+00:00",
+  "count": 68,
+  "exported_at": "2026-11-13T17:15:43.559578+00:00",
   "collection": {
-    "attempted_at": "2026-11-13T08:06:16.285844+00:00",
+    "attempted_at": "2026-11-13T17:15:43.559578+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 0,
+    "new_items": 4,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
