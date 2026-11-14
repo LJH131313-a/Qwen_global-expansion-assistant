@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-14T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Backgrounder: Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/backgrounder-minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-c.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-14T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-calgary-area-b.html",
+      "verified": "待核验"
+    },
+    {
+      "market": "加拿大",
+      "category": "贸易与海关",
+      "level": "中",
+      "date": "2026-11-14T00:00:00",
+      "source": "加拿大政府新闻 API（官方 Atom）",
+      "title": "Parliamentary Secretary Naqvi highlights new action plan to protect workers from tariffs and strengthen Ontario industries",
+      "summary": "Canada and Ontario have world-class automotive and steel industries and vast deposits of critical minerals. It has the workers, expertise, and resources to drive Canada’s economic transformation. By working together, the federal and provincial governments are protecting good jobs, attracting investment, and ensuring Ontario’s industries remain competitive.",
+      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
+      "products": "小家电与跨境经营政策",
+      "url": "https://www.canada.ca/en/global-affairs/news/2026/11/parliamentary-secretary-naqvi-highlights-new-action-plan-to-protect-workers-from-tariffs-and-strengthen-ontario-industries.html",
+      "verified": "待核验"
+    },
+    {
       "market": "美国",
       "category": "产品准入与安全",
       "level": "中",
@@ -37,32 +76,6 @@
       "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
       "products": "小家电与跨境经营政策",
       "url": "https://www.canada.ca/en/global-affairs/news/2026/11/parliamentary-secretary-naqvi-to-highlight-measures-to-protect-workers-from-tariffs-and-strengthen-ontarios-industries.html",
-      "verified": "待核验"
-    },
-    {
-      "market": "加拿大",
-      "category": "贸易与海关",
-      "level": "中",
-      "date": "2026-11-13T00:00:00",
-      "source": "加拿大政府新闻 API（官方 Atom）",
-      "title": "Backgrounder: Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
-      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
-      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
-      "products": "小家电与跨境经营政策",
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/backgrounder-minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-c.html",
-      "verified": "待核验"
-    },
-    {
-      "market": "加拿大",
-      "category": "贸易与海关",
-      "level": "中",
-      "date": "2026-11-13T00:00:00",
-      "source": "加拿大政府新闻 API（官方 Atom）",
-      "title": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
-      "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
-      "impact": "加拿大关注建议：复核 HS 编码、关税/贸易救济、原产地规则、进口许可和清关文件，更新到岸成本及供应链方案。",
-      "products": "小家电与跨境经营政策",
-      "url": "https://www.canada.ca/en/prairies-economic-development/news/2026/11/minister-olszewski-highlights-the-positive-impact-budget-2026-will-have-for-alberta-businesses-and-announces-new-investments-to-help-calgary-area-b.html",
       "verified": "待核验"
     },
     {
@@ -885,13 +898,13 @@
       "verified": "待核验"
     }
   ],
-  "count": 68,
-  "exported_at": "2026-11-13T17:15:43.559578+00:00",
+  "count": 69,
+  "exported_at": "2026-11-14T07:39:34.126835+00:00",
   "collection": {
-    "attempted_at": "2026-11-13T17:15:43.559578+00:00",
+    "attempted_at": "2026-11-14T07:39:34.126835+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 4,
+    "new_items": 1,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
