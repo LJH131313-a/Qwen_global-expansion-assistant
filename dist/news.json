@@ -43,7 +43,7 @@
       "market": "加拿大",
       "category": "贸易与海关",
       "level": "中",
-      "date": "2026-11-14T00:00:00",
+      "date": "2026-11-15T00:00:00",
       "source": "加拿大政府新闻 API（官方 Atom）",
       "title": "Backgrounder: Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
       "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta Businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
@@ -56,7 +56,7 @@
       "market": "加拿大",
       "category": "贸易与海关",
       "level": "中",
-      "date": "2026-11-14T00:00:00",
+      "date": "2026-11-15T00:00:00",
       "source": "加拿大政府新闻 API（官方 Atom）",
       "title": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
       "summary": "Minister Olszewski highlights the positive impact Budget 2026 will have for Alberta businesses and announces new investments to help Calgary-area businesses overcome tariff-related challenges",
@@ -69,7 +69,7 @@
       "market": "加拿大",
       "category": "贸易与海关",
       "level": "中",
-      "date": "2026-11-14T00:00:00",
+      "date": "2026-11-15T00:00:00",
       "source": "加拿大政府新闻 API（官方 Atom）",
       "title": "Parliamentary Secretary Naqvi highlights new action plan to protect workers from tariffs and strengthen Ontario industries",
       "summary": "Canada and Ontario have world-class automotive and steel industries and vast deposits of critical minerals. It has the workers, expertise, and resources to drive Canada’s economic transformation. By working together, the federal and provincial governments are protecting good jobs, attracting investment, and ensuring Ontario’s industries remain competitive.",
@@ -938,12 +938,12 @@
     }
   ],
   "count": 72,
-  "exported_at": "2026-11-14T15:52:03.587255+00:00",
+  "exported_at": "2026-11-15T07:54:44.637997+00:00",
   "collection": {
-    "attempted_at": "2026-11-14T15:52:03.587255+00:00",
+    "attempted_at": "2026-11-15T07:54:44.637997+00:00",
     "successful_sources": 9,
     "total_sources": 11,
-    "new_items": 3,
+    "new_items": 0,
     "errors": [
       {
         "source": "巴西政府最新新闻（官方 Atom）",
