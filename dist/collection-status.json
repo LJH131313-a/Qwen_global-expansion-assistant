@@ -1,8 +1,8 @@
 {
-  "attempted_at": "2026-11-16T19:40:24.737745+00:00",
+  "attempted_at": "2026-11-17T09:16:56.481489+00:00",
   "successful_sources": 9,
   "total_sources": 11,
-  "new_items": 0,
+  "new_items": 2,
   "errors": [
     {
       "source": "巴西政府最新新闻（官方 Atom）",
